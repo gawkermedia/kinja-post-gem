@@ -1,0 +1,255 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://kinja.com/api/profile/account/burner/login?screenName=gemtest&token=mzjjk%20judly%20bjysk%20ujnbv
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Headers:
+      - Content-Type
+      X-Kinja-Version:
+      - '20141118'
+      Access-Control-Allow-Methods:
+      - POST, GET, OPTIONS, PUT, DELETE
+      Cache-Control:
+      - no-cache, no-store, private
+      P3p:
+      - CP="IDC DSP COR CURa ADMa OUR IND PHY ONL COM STA"
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Robots-Tag:
+      - noindex
+      Set-Cookie:
+      - KinjaBurner="d41d8cd98f00b204e9800998ecf8427e|mzjjk judly bjysk ujnbv"; Expires=Thu,
+        20 Feb 2025 23:19:02 GMT; Path=/; HTTPOnly
+      - KinjaRememberMe=5876237249235511023|a796ca55-f22b-4047-be8b-3d9777d3b12e;
+        Expires=Thu, 20 Feb 2025 23:19:02 GMT; Path=/; HTTPOnly
+      - KinjaSession=a796ca55-f22b-4047-be8b-3d9777d3b12e; Expires=Mon, 02 Mar 2015
+        23:19:02 GMT; Path=/; HTTPOnly
+      - geocc=US;path=/;
+      X-Kinja:
+      - 'app01.bfc.kinja-ops.com #993'
+      Content-Length:
+      - '334'
+      Accept-Ranges:
+      - none
+      Date:
+      - Mon, 23 Feb 2015 23:19:02 GMT
+      Via:
+      - 1.1 varnish
+      Age:
+      - '0'
+      Connection:
+      - keep-alive
+      X-Served-By:
+      - cache-jfk1031-JFK
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+      X-Timer:
+      - S1424733542.367708,VS0,VE32
+      Vary:
+      - X-Feature-Hash
+    body:
+      encoding: UTF-8
+      string: '{"meta":{"error":null,"warnings":[]},"data":{"id":"5876237249235511023","screenName":"gemtest","displayName":"gemtest","authType":4,"authName":"burner","createdMillis":1424733492000,"updatedMillis":1424733493000,"converted":3,"status":"enabled","avatar":{"id":"17jcxk0ml1k8qpng","format":"png"},"superUser":false,"remoteAccounts":[]}}'
+    http_version: 
+  recorded_at: Mon, 23 Feb 2015 23:19:02 GMT
+- request:
+    method: get
+    uri: http://kinja.com/api/profile/token
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Cookie:
+      - KinjaSession=a796ca55-f22b-4047-be8b-3d9777d3b12e
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Headers:
+      - Content-Type
+      X-Kinja-Version:
+      - '20141118'
+      Access-Control-Allow-Methods:
+      - POST, GET, OPTIONS, PUT, DELETE
+      Cache-Control:
+      - no-cache, no-store, private
+      P3p:
+      - CP="IDC DSP COR CURa ADMa OUR IND PHY ONL COM STA"
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Robots-Tag:
+      - noindex
+      Set-Cookie:
+      - KinjaSession=a796ca55-f22b-4047-be8b-3d9777d3b12e; Expires=Mon, 02 Mar 2015
+        23:19:02 GMT; Path=/; HTTPOnly
+      - geocc=US;path=/;
+      X-Kinja:
+      - 'app14.bfc.kinja-ops.com #993'
+      Content-Length:
+      - '172'
+      Accept-Ranges:
+      - none
+      Date:
+      - Mon, 23 Feb 2015 23:19:02 GMT
+      Via:
+      - 1.1 varnish
+      Age:
+      - '0'
+      Connection:
+      - keep-alive
+      X-Served-By:
+      - cache-jfk1027-JFK
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+      X-Timer:
+      - S1424733542.411984,VS0,VE7
+      Vary:
+      - X-Feature-Hash
+    body:
+      encoding: UTF-8
+      string: '{"meta":{"error":null,"warnings":[]},"data":{"token":"b088e5f6-2d47-450a-b31d-d76b805d6f33","session":"a796ca55-f22b-4047-be8b-3d9777d3b12e","createdMillis":1424733542412}}'
+    http_version: 
+  recorded_at: Mon, 23 Feb 2015 23:19:02 GMT
+- request:
+    method: get
+    uri: http://kinja.com/api/profile/user/views/asAuthor?ids=5876237249235511023
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Headers:
+      - Content-Type
+      X-Kinja-Version:
+      - '20141118'
+      Access-Control-Allow-Methods:
+      - POST, GET, OPTIONS, PUT, DELETE
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Robots-Tag:
+      - noindex
+      X-Kinja:
+      - 'app16.bfc.kinja-ops.com #993'
+      X-Cdn-Fetch:
+      - mantle-origin-cache
+      Content-Length:
+      - '217'
+      Accept-Ranges:
+      - none
+      Date:
+      - Mon, 23 Feb 2015 23:19:02 GMT
+      Via:
+      - 1.1 varnish
+      Age:
+      - '0'
+      Connection:
+      - keep-alive
+      X-Served-By:
+      - cache-jfk1027-JFK
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+      X-Timer:
+      - S1424733542.438524,VS0,VE5
+      Vary:
+      - X-Feature-Hash
+      Set-Cookie:
+      - geocc=US;path=/;
+    body:
+      encoding: UTF-8
+      string: '{"meta":{"error":null,"warnings":[]},"data":[{"id":"5876237249235511023","screenName":"gemtest","displayName":"gemtest","superUser":false,"defaultBlogId":1634457255,"avatar":{"id":"17jcxk0ml1k8qpng","format":"png"}}]}'
+    http_version: 
+  recorded_at: Mon, 23 Feb 2015 23:19:02 GMT
+- request:
+    method: post
+    uri: http://kinja.com/api/core/post/add?token=b088e5f6-2d47-450a-b31d-d76b805d6f33
+    body:
+      encoding: UTF-8
+      string: '{"headline":"","original":"<p>[<a data-attr=\"http://gawker.com/no-playlist-1685415865\"
+        href=\"http://gawker.com/no-playlist-1685415865\">Gawker</a>]</p>","defaultBlogId":1634457255,"status":"PUBLISHED","allowReplies":true}'
+    headers:
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Headers:
+      - Content-Type
+      Access-Control-Allow-Methods:
+      - POST, GET, OPTIONS, PUT, DELETE
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Kinja:
+      - 'app01.bfc.kinja-ops.com #5968'
+      X-Cdn-Fetch:
+      - mantle-default
+      Content-Length:
+      - '3047'
+      Accept-Ranges:
+      - none
+      Date:
+      - Mon, 23 Feb 2015 23:19:02 GMT
+      Via:
+      - 1.1 varnish
+      Connection:
+      - keep-alive
+      X-Served-By:
+      - cache-jfk1020-JFK
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+      X-Timer:
+      - S1424733542.455929,VS0,VE162
+      Vary:
+      - X-Feature-Hash
+      Set-Cookie:
+      - geocc=US;path=/;
+    body:
+      encoding: UTF-8
+      string: '{"meta":{"error":null,"warnings":[]},"data":{"id":1687581385,"parentId":null,"parentAuthorId":null,"starterId":1687581385,"publishTimeMillis":1424733542575,"lastUpdateTimeMillis":1424733542575,"timezone":"America/New_York","shareBlogId":null,"sharedPostId":null,"sharedUrl":null,"salesAvatar":null,"sponsored":false,"status":"PUBLISHED","authorId":"5876237249235511023","allowReplies":true,"byline":"","showByline":true,"properties":"","xmliId":null,"blogId":[1634457255],"defaultBlogId":1634457255,"authorBlogId":1634457255,"liveBlog":false,"approved":true,"headline":"","original":"<p>[<a
+        data-attr=\"http://gawker.com/no-playlist-1685415865\" href=\"http://gawker.com/no-playlist-1685415865\">Gawker</a>]</p>","display":"<body><p>[<a
+        href=\"http://gawker.com/no-playlist-1685415865\">Gawker</a><inset id=\"1685415865\"></inset>]</p></body>","excerpt":"","source":"wysiwyg","images":[],"videos":[],"videoThumbs":[],"author":{"id":"5876237249235511023","screenName":"gemtest","displayName":"gemtest","defaultBlogId":1634457255,"defaultBlog":null,"avatar":{"id":"17jcxk0ml1k8qpng","format":"png"}},"tags":[],"blogs":[{"id":1634457255,"name":"gemtest","displayName":"gemtest","canonicalHost":"gemtest.kinja.com","hosts":[],"applicationHost":"kinja.com","status":"ENABLED","timezone":"America/New_York","timezoneOffset":-18000000,"timezoneShortname":"EST","properties":"","adminProperties":"","mergedProperties":null}],"annotation":null,"viewstats":null,"promotions":[],"replyMeta":null,"replyCount":null,"parent":null,"starter":null,"blogPostAction":null,"score":null,"insets":[],"referencedBy":[],"likes":null,"sharedPost":null,"reframes":[],"noindex":null,"isRecommended":null,"permalink":"http://gemtest.kinja.com/gawker-1687581385","permalinkHost":"http://gemtest.kinja.com","permalinkPath":"/gawker-1687581385","parsedBody":{"display":"<p
+        class=\"first-text\">[<a href=\"http://gawker.com/no-playlist-1685415865\"
+        target=\"_blank\">Gawker</a><inset id=\"1685415865\"></inset>]</p><!-- core-decorated
+        -->","excerpt":"<p class=\"first-text\">[<a href=\"http://gawker.com/no-playlist-1685415865\"
+        target=\"_blank\">Gawker</a>]</p>","compact":"[Gawker]...","plaintext":"[Gawker]","shortHeadline":"","shortExcerpt":"<p
+        class=\"first-text\">[<a href=\"http://gawker.com/no-playlist-1685415865\"
+        target=\"_blank\">Gawker</a>]</p>","excerptWithAssets":"<p class=\"first-text\">[<a
+        href=\"http://gawker.com/no-playlist-1685415865\" target=\"_blank\">Gawker</a>\n
+        <inset id=\"1685415865\"></inset>]</p>","aboveHeadline":null,"leftOfHeadline":null,"firstAsset":"","length":8,"postId":1687581385,"isBlip":true,"sharingMainImage":null,"facebookImage":null,"decorationFlags":["Default"]},"publishTime":{"timestamp":1424733542575,"timezone":"America/New_York","MdyHm":"02/23/2015
+        18:19","MdyatHm":"02/23/2015 at 18:19","rfc822":"Mon, 23 Feb 2015 23:19:02
+        GMT","yMdHmsZ":"2015-02-23T18:19:02-05:00","hmma":"6:19pm","day":"Monday","Mddyyhmma":"2/23/15
+        6:19pm","fullDate":"February 23, 2015","relative":{"amount":null,"type":"now"}},"authorBlogName":"gemtest"}}'
+    http_version: 
+  recorded_at: Mon, 23 Feb 2015 23:19:02 GMT
+recorded_with: VCR 2.9.3
