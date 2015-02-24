@@ -1,6 +1,6 @@
 # Kinja
 
-TODO: Write a gem description
+Ruby gem for posting to Kinja (currently only supports Burner accounts)
 
 ## Installation
 
