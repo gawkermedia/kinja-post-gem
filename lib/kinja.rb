@@ -7,7 +7,7 @@ module Kinja
     LOGIN_PATH  = "/profile/account/burner/login"
     TOKEN_PATH  = "/profile/token"
     CREATE_POST_PATH   = "/core/post/add"
-    GET_POST_PATH   = "/core/post"
+    POST_PATH   = "/core/post"
     AUTHOR_PATH = "/profile/user/views/asAuthor"
 
     def initialize(opts={})
@@ -31,9 +31,18 @@ module Kinja
         headers: { 'Content-Type' => 'application/json' }
     end
 
+    def update_post(link_or_id, options)
+      id = get_post_id link_or_id
+      get_api_token(login)
+      options[:defaultBlogId] = get_default_blog_id(@user)
+      HTTParty.post "#{API_ROOT}#{POST_PATH}/#{id}/update?token=#{@api_token}",
+        body: options.to_json,
+        headers: { 'Content-Type' => 'application/json' }
+    end
+
     def get_post(link_or_id)
       id = get_post_id link_or_id
-      HTTParty.get "#{API_ROOT}#{GET_POST_PATH}/#{id}"
+      HTTParty.get "#{API_ROOT}#{POST_PATH}/#{id}"
     end
 
     def get_post_id(link)
@@ -42,17 +51,6 @@ module Kinja
       old_link_re = /\.com\/(\d+)\//
       return link.match(new_link_re)[1] if link.match(new_link_re)
       return link.match(old_link_re)[1] if link.match(old_link_re)
-  # isLink: (link) ->
-  #   @newLink(link) or @oldLink(link)
-  # newLink: (link) ->
-  #   link.match(/-(\d+)\/?/)
-  # oldLink: (link) ->
-  #   link.match(/\.com\/\d+\//)
-  # postId: (link) ->
-  #   if @newLink(link)
-  #     link.match(/-(\d+)\/?/)[1]
-  #   else
-  #     link.match(/\.com\/(\d+)\//)[1]
     end
 
     def get_author(user)

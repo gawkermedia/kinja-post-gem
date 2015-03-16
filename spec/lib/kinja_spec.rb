@@ -65,6 +65,13 @@ describe Kinja do
     end
   end
 
+  it "updates posts" do
+    VCR.use_cassette('update-post') do
+      link = "http://gemtest.kinja.com/gawker-1687581385"
+      post = kinja.update_post(link, publishTimeMillis: DateTime.now.strftime('%Q').to_i)
+    end
+  end
+
   it "retrieves posts" do
     VCR.use_cassette('get_post') do
       post = kinja.get_post("1691726561")
