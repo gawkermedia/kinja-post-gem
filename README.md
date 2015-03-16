@@ -45,6 +45,8 @@ post = client.get_post("1691730232")
 
 ## Todo
 * Refactor: Shouldn't need to log in to fetch a post
+* Find API endpoint to update a post
+* Build out other common REST endpoints
 
 ## Contributing
 
