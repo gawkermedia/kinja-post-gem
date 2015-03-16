@@ -43,6 +43,9 @@ post = client.get_post("http://gawker.com/lapd-claims-the-jinx-had-nothing-to-do
 post = client.get_post("1691730232")
 ```
 
+## Todo
+* Refactor: Shouldn't need to log in to fetch a post
+
 ## Contributing
 
 1. Fork it ( https://github.com/adampash/kinja/fork )
