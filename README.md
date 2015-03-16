@@ -28,12 +28,19 @@ client = Kinja::Client.new(
 )
 
 # Create a post
-post = client.post(
+post = client.create_post(
   headline: '',                       # required
   body: '<p>This is a post</p>',      # required
   status: 'PUBLISHED',                # optional (default is "DRAFT")
   replies: false                      # optional (default is true)
 )
+
+# Get a post
+post = client.get_post("http://gawker.com/lapd-claims-the-jinx-had-nothing-to-do-with-robert-durs-1691730232")
+
+# ...OR...
+
+post = client.get_post("1691730232")
 ```
 
 ## Contributing

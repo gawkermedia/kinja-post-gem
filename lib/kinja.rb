@@ -6,7 +6,8 @@ module Kinja
     API_ROOT    = "http://kinja.com/api"
     LOGIN_PATH  = "/profile/account/burner/login"
     TOKEN_PATH  = "/profile/token"
-    POST_PATH   = "/core/post/add"
+    CREATE_POST_PATH   = "/core/post/add"
+    GET_POST_PATH   = "/core/post"
     AUTHOR_PATH = "/profile/user/views/asAuthor"
 
     def initialize(opts={})
@@ -14,12 +15,12 @@ module Kinja
       @pass = opts[:password]
     end
 
-    def post(opts={})
+    def create_post(opts={})
       opts[:status] = opts[:status] || "DRAFT"
       opts[:replies] = opts[:replies] || true
-      api_token(login)
+      get_api_token(login)
 
-      HTTParty.post "#{API_ROOT}#{POST_PATH}?token=#{@api_token}",
+      HTTParty.post "#{API_ROOT}#{CREATE_POST_PATH}?token=#{@api_token}",
         body: {
           headline: opts[:headline],
           original: opts[:body],
@@ -28,6 +29,30 @@ module Kinja
           allowReplies: opts[:replies]
         }.to_json,
         headers: { 'Content-Type' => 'application/json' }
+    end
+
+    def get_post(link_or_id)
+      id = get_post_id link_or_id
+      HTTParty.get "#{API_ROOT}#{GET_POST_PATH}/#{id}"
+    end
+
+    def get_post_id(link)
+      return link if link.match(/^\d+$/)
+      new_link_re = /-(\d+)\/?/
+      old_link_re = /\.com\/(\d+)\//
+      return link.match(new_link_re)[1] if link.match(new_link_re)
+      return link.match(old_link_re)[1] if link.match(old_link_re)
+  # isLink: (link) ->
+  #   @newLink(link) or @oldLink(link)
+  # newLink: (link) ->
+  #   link.match(/-(\d+)\/?/)
+  # oldLink: (link) ->
+  #   link.match(/\.com\/\d+\//)
+  # postId: (link) ->
+  #   if @newLink(link)
+  #     link.match(/-(\d+)\/?/)[1]
+  #   else
+  #     link.match(/\.com\/(\d+)\//)[1]
     end
 
     def get_author(user)
@@ -44,7 +69,7 @@ module Kinja
       response
     end
 
-    def api_token(response)
+    def get_api_token(response)
       @api_token = HTTParty.get("#{API_ROOT}#{TOKEN_PATH}",
         cookies: {KinjaSession: session_token(response)}
                   )['data']['token']
