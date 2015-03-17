@@ -34,12 +34,14 @@ module Kinja
         headers: { 'Content-Type' => 'application/json' }
     end
 
-    def update_post(link_or_id, options)
-      id = get_post_id link_or_id
+    def update_post(link_or_id, opts)
       get_api_token(login)
-      options[:defaultBlogId] = get_default_blog_id(@user)
+
+      id = get_post_id link_or_id
+      opts[:defaultBlogId] = get_default_blog_id(@user)
+      opts[:defaultBlogId] = opts[:defaultBlogId] || get_default_blog_id(@user)
       HTTParty.post "#{API_ROOT}#{POST_PATH}/#{id}/update?token=#{@api_token}",
-        body: options.to_json,
+        body: opts.to_json,
         headers: { 'Content-Type' => 'application/json' }
     end
 
