@@ -38,7 +38,6 @@ module Kinja
       get_api_token(login)
 
       id = get_post_id link_or_id
-      opts[:defaultBlogId] = get_default_blog_id(@user)
       opts[:defaultBlogId] = opts[:defaultBlogId] || get_default_blog_id(@user)
       HTTParty.post "#{API_ROOT}#{POST_PATH}/#{id}/update?token=#{@api_token}",
         body: opts.to_json,
