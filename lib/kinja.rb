@@ -3,6 +3,8 @@ require 'httparty'
 
 module Kinja
   class Client
+    attr_accessor :user
+
     API_ROOT    = "http://kinja.com/api"
     LOGIN_PATH  = "/profile/account/burner/login"
     TOKEN_PATH  = "/profile/token"
@@ -16,15 +18,16 @@ module Kinja
     end
 
     def create_post(opts={})
+      get_api_token(login)
       opts[:status] = opts[:status] || "DRAFT"
       opts[:replies] = opts[:replies] || true
-      get_api_token(login)
+      opts[:defaultBlogId] = opts[:defaultBlogId] || get_default_blog_id(@user)
 
       HTTParty.post "#{API_ROOT}#{CREATE_POST_PATH}?token=#{@api_token}",
         body: {
           headline: opts[:headline],
           original: opts[:body],
-          defaultBlogId: get_default_blog_id(@user),
+          defaultBlogId: opts[:defaultBlogId],
           status: opts[:status],
           allowReplies: opts[:replies]
         }.to_json,
