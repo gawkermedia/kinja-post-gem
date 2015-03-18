@@ -13,8 +13,10 @@ module Kinja
     AUTHOR_PATH = "/profile/user/views/asAuthor"
 
     def initialize(opts={})
-      @username = opts[:user]
-      @pass = opts[:password]
+      if opts.has_key? :user and opts.has_key? :password
+        @username = opts[:user]
+        @pass = opts[:password]
+      end
     end
 
     def create_post(opts={})
