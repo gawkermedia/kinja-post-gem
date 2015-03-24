@@ -21,7 +21,7 @@ describe Kinja do
 
   let(:response) {
     VCR.use_cassette('login') do
-    kinja.login
+      kinja.login
     end
   }
 
