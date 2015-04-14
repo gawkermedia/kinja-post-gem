@@ -1,0 +1,67 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://kinja.com/api/profile/user/views/asAuthor?ids=5716491910670767033
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Headers:
+      - Content-Type
+      Access-Control-Allow-Methods:
+      - POST, GET, OPTIONS, PUT, DELETE
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Kinja:
+      - 'app05.xyz.kinja-ops.com #1178'
+      X-Kinja-Version:
+      - '20141118'
+      X-Robots-Tag:
+      - noindex
+      X-Cdn-Fetch:
+      - mantle-origin-cache
+      Content-Length:
+      - '188'
+      Accept-Ranges:
+      - none
+      Date:
+      - Tue, 14 Apr 2015 13:42:56 GMT
+      Via:
+      - 1.1 varnish
+      Age:
+      - '5'
+      Connection:
+      - keep-alive
+      X-Served-By:
+      - cache-jfk1024-JFK
+      X-Cache:
+      - HIT
+      X-Cache-Hits:
+      - '1'
+      X-Timer:
+      - S1429018976.317220,VS0,VE0
+      Vary:
+      - X-Feature-Hash,Accept-Encoding
+      Set-Cookie:
+      - geocc=US;path=/;
+    body:
+      encoding: ASCII-8BIT
+      string: '{"meta":{"error":null,"warnings":[]},"data":[{"id":"5716491910670767033","screenName":"adampash","displayName":"Adam
+        Pash","superUser":false,"defaultBlogId":771,"avatar":{"id":"gdjxua361big4hslpfhx","format":"png"}}]}'
+    http_version: 
+  recorded_at: Tue, 14 Apr 2015 13:42:58 GMT
+recorded_with: VCR 2.9.3

@@ -6,7 +6,13 @@ http_interactions:
     body:
       encoding: US-ASCII
       string: ''
-    headers: {}
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
   response:
     status:
       code: 200
@@ -26,24 +32,26 @@ http_interactions:
       - CP="IDC DSP COR CURa ADMa OUR IND PHY ONL COM STA"
       Set-Cookie:
       - KinjaBurner="d41d8cd98f00b204e9800998ecf8427e|mzjjk judly bjysk ujnbv"; Expires=Thu,
-        13 Mar 2025 20:24:38 GMT; Path=/; HTTPOnly
-      - KinjaRememberMe=5876237249235511023|1822a5ef-743d-452a-815a-8b4a35bafc1e;
-        Expires=Thu, 13 Mar 2025 20:24:38 GMT; Path=/; HTTPOnly
-      - KinjaSession=1822a5ef-743d-452a-815a-8b4a35bafc1e; Expires=Mon, 23 Mar 2015
-        20:24:38 GMT; Path=/; HTTPOnly
+        10 Apr 2025 20:19:20 GMT; Path=/; HTTPOnly
+      - KinjaRememberMe=5876237249235511023|30fc1844-bda3-400b-a6d9-6e910b004e50;
+        Expires=Thu, 10 Apr 2025 20:19:20 GMT; Path=/; HTTPOnly
+      - KinjaSession=30fc1844-bda3-400b-a6d9-6e910b004e50; Expires=Mon, 20 Apr 2015
+        20:19:20 GMT; Path=/; HTTPOnly
       - geocc=US;path=/;
       X-Kinja:
-      - 'app11.xyz.kinja-ops.com #1069'
+      - 'app18.bfc.kinja-ops.com #1178'
       X-Kinja-Version:
       - '20141118'
       X-Robots-Tag:
       - noindex
+      X-Cdn-Fetch:
+      - mantle-setcookie
       Content-Length:
-      - '352'
+      - '244'
       Accept-Ranges:
       - none
       Date:
-      - Mon, 16 Mar 2015 20:24:38 GMT
+      - Mon, 13 Apr 2015 20:19:20 GMT
       Via:
       - 1.1 varnish
       Age:
@@ -51,20 +59,20 @@ http_interactions:
       Connection:
       - keep-alive
       X-Served-By:
-      - cache-jfk1030-JFK
+      - cache-jfk1021-JFK
       X-Cache:
       - MISS
       X-Cache-Hits:
       - '0'
       X-Timer:
-      - S1426537478.084367,VS0,VE53
+      - S1428956360.912781,VS0,VE37
       Vary:
-      - X-Feature-Hash
+      - X-Feature-Hash,Accept-Encoding
     body:
-      encoding: UTF-8
-      string: '{"meta":{"error":null,"warnings":[]},"data":{"id":"5876237249235511023","screenName":"gemtest","displayName":"gemtest","authType":4,"authName":"burner","createdMillis":1424733492000,"updatedMillis":1426537478130,"lastLoginMillis":1426537478130,"status":"enabled","avatar":{"id":"17jcxk0ml1k8qpng","format":"png"},"superUser":false,"remoteAccounts":[]}}'
+      encoding: ASCII-8BIT
+      string: '{"meta":{"error":null,"warnings":[]},"data":{"id":"5876237249235511023","screenName":"gemtest","displayName":"gemtest","authType":4,"authName":"burner","createdMillis":1424733492000,"updatedMillis":1428956360940,"lastLoginMillis":1428956360940,"status":"enabled","avatar":{"id":"17jcxk0ml1k8qpng","format":"png"},"superUser":false,"remoteAccounts":[]}}'
     http_version: 
-  recorded_at: Mon, 16 Mar 2015 20:24:37 GMT
+  recorded_at: Mon, 13 Apr 2015 20:19:24 GMT
 - request:
     method: get
     uri: http://kinja.com/api/profile/token
@@ -73,7 +81,7 @@ http_interactions:
       string: ''
     headers:
       Cookie:
-      - KinjaSession=1822a5ef-743d-452a-815a-8b4a35bafc1e
+      - KinjaSession=30fc1844-bda3-400b-a6d9-6e910b004e50
   response:
     status:
       code: 200
@@ -92,40 +100,44 @@ http_interactions:
       P3p:
       - CP="IDC DSP COR CURa ADMa OUR IND PHY ONL COM STA"
       Set-Cookie:
-      - KinjaSession=1822a5ef-743d-452a-815a-8b4a35bafc1e; Expires=Mon, 23 Mar 2015
-        20:24:38 GMT; Path=/; HTTPOnly
+      - KinjaSession=30fc1844-bda3-400b-a6d9-6e910b004e50; Expires=Mon, 20 Apr 2015
+        20:19:20 GMT; Path=/; HTTPOnly
       - geocc=US;path=/;
       X-Kinja:
-      - 'app04.bfc.kinja-ops.com #1069'
+      - 'app06.xyz.kinja-ops.com #1178'
       X-Kinja-Version:
       - '20141118'
       X-Robots-Tag:
       - noindex
+      X-Cdn-Fetch:
+      - mantle-setcookie
       Content-Length:
       - '172'
       Accept-Ranges:
       - none
       Date:
-      - Mon, 16 Mar 2015 20:24:38 GMT
+      - Mon, 13 Apr 2015 20:19:20 GMT
       Via:
       - 1.1 varnish
+      Age:
+      - '0'
       Connection:
       - keep-alive
       X-Served-By:
-      - cache-jfk1033-JFK
+      - cache-jfk1027-JFK
       X-Cache:
       - MISS
       X-Cache-Hits:
       - '0'
       X-Timer:
-      - S1426537478.184876,VS0,VE6
+      - S1428956360.989420,VS0,VE9
       Vary:
       - X-Feature-Hash
     body:
       encoding: UTF-8
-      string: '{"meta":{"error":null,"warnings":[]},"data":{"token":"21df3dc7-d016-482f-9f71-8cd0a0e06b0b","session":"1822a5ef-743d-452a-815a-8b4a35bafc1e","createdMillis":1426537478187}}'
+      string: '{"meta":{"error":null,"warnings":[]},"data":{"token":"cf039981-df6b-4fa2-b1f7-5a6cd86ee28f","session":"30fc1844-bda3-400b-a6d9-6e910b004e50","createdMillis":1428956360995}}'
     http_version: 
-  recorded_at: Mon, 16 Mar 2015 20:24:37 GMT
+  recorded_at: Mon, 13 Apr 2015 20:19:24 GMT
 - request:
     method: get
     uri: http://kinja.com/api/profile/user/views/asAuthor?ids=5876237249235511023
@@ -147,7 +159,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       X-Kinja:
-      - 'app18.xyz.kinja-ops.com #1069'
+      - 'app07.bfc.kinja-ops.com #1178'
       X-Kinja-Version:
       - '20141118'
       X-Robots-Tag:
@@ -159,21 +171,21 @@ http_interactions:
       Accept-Ranges:
       - none
       Date:
-      - Mon, 16 Mar 2015 20:24:38 GMT
+      - Mon, 13 Apr 2015 20:19:21 GMT
       Via:
       - 1.1 varnish
       Age:
-      - '10'
+      - '0'
       Connection:
       - keep-alive
       X-Served-By:
-      - cache-jfk1024-JFK
+      - cache-jfk1022-JFK
       X-Cache:
-      - HIT
+      - MISS
       X-Cache-Hits:
-      - '1'
+      - '0'
       X-Timer:
-      - S1426537478.235141,VS0,VE0
+      - S1428956361.051829,VS0,VE6
       Vary:
       - X-Feature-Hash
       Set-Cookie:
@@ -182,70 +194,293 @@ http_interactions:
       encoding: UTF-8
       string: '{"meta":{"error":null,"warnings":[]},"data":[{"id":"5876237249235511023","screenName":"gemtest","displayName":"gemtest","superUser":false,"defaultBlogId":1634457255,"avatar":{"id":"17jcxk0ml1k8qpng","format":"png"}}]}'
     http_version: 
-  recorded_at: Mon, 16 Mar 2015 20:24:37 GMT
+  recorded_at: Mon, 13 Apr 2015 20:19:24 GMT
 - request:
     method: post
-    uri: http://kinja.com/api/core/post/1687581385/update?token=21df3dc7-d016-482f-9f71-8cd0a0e06b0b
+    uri: http://kinja.com/apicore/post/1687581385/update?token=cf039981-df6b-4fa2-b1f7-5a6cd86ee28f
     body:
       encoding: UTF-8
-      string: '{"publishTimeMillis":1426537477797,"defaultBlogId":1634457255}'
+      string: '{"publishTimeMillis":1428956364169,"defaultBlogId":1634457255}'
     headers:
       Content-Type:
       - application/json
   response:
     status:
-      code: 200
-      message: OK
+      code: 404
+      message: Not Found
     headers:
-      Access-Control-Allow-Origin:
-      - "*"
-      Access-Control-Allow-Headers:
-      - Content-Type
-      Access-Control-Allow-Methods:
-      - POST, GET, OPTIONS, PUT, DELETE
+      Cache-Control:
+      - max-age=2
       Content-Type:
-      - application/json; charset=utf-8
+      - text/html; charset=utf-8
+      P3p:
+      - CP="IDC DSP COR CURa ADMa OUR IND PHY ONL COM STA"
       X-Kinja:
-      - 'app03.bfc.kinja-ops.com #6039'
+      - 'app03.xyz.kinja-ops.com #15570'
+      X-Kinja-Build:
+      - '15570'
+      X-Kinja-Revision:
+      - 52de436be3b8012e5008d37d39e177fd58b85cac
+      X-Kinja-Server:
+      - app03.xyz.kinja-ops.com
       X-Cdn-Fetch:
-      - mantle-default
+      - mantle-origin-cache
       Content-Length:
-      - '2832'
+      - '31023'
       Accept-Ranges:
-      - none
+      - bytes
       Date:
-      - Mon, 16 Mar 2015 20:24:38 GMT
+      - Mon, 13 Apr 2015 20:19:21 GMT
       Via:
       - 1.1 varnish
       Connection:
       - keep-alive
       X-Served-By:
-      - cache-jfk1034-JFK
+      - cache-jfk1025-JFK
       X-Cache:
       - MISS
       X-Cache-Hits:
       - '0'
       X-Timer:
-      - S1426537478.297798,VS0,VE75
+      - S1428956361.113201,VS0,VE28
       Vary:
-      - X-Feature-Hash
+      - Accept-Encoding, X-Feature-Hash
       Set-Cookie:
       - geocc=US;path=/;
     body:
       encoding: UTF-8
-      string: '{"meta":{"error":null,"warnings":[]},"data":{"id":1687581385,"parentId":null,"parentAuthorId":null,"starterId":1687581385,"publishTimeMillis":1426537477797,"lastUpdateTimeMillis":1426537478357,"timezone":"America/New_York","shareBlogId":null,"sharedPostId":null,"sharedUrl":null,"salesAvatar":null,"sponsored":false,"status":"PUBLISHED","authorId":"5876237249235511023","allowReplies":true,"byline":"","showByline":true,"properties":"","xmliId":null,"blogId":[1634457255],"defaultBlogId":1634457255,"authorBlogId":1634457255,"liveBlog":false,"approved":true,"headline":"","original":"<p>[<a
-        data-attr=\"http://gawker.com/no-playlist-1685415865\" href=\"http://gawker.com/no-playlist-1685415865\">Gawker</a>]</p>","source":"wysiwyg","images":[],"videos":[],"videoThumbs":[],"author":{"id":"5876237249235511023","screenName":"gemtest","displayName":"gemtest","defaultBlogId":1634457255,"defaultBlog":null,"avatar":{"id":"17jcxk0ml1k8qpng","format":"png"}},"tags":[],"blogs":[{"id":1634457255,"name":"gemtest","displayName":"gemtest","canonicalHost":"gemtest.kinja.com","hosts":[],"status":"ENABLED","timezone":"America/New_York","timezoneOffset":-14400000,"timezoneShortname":"EDT","mergedProperties":null,"avatar":null}],"annotation":null,"viewstats":null,"promotions":[],"replyMeta":null,"replyCount":null,"parent":null,"starter":null,"blogPostAction":null,"score":null,"insets":[],"referencedBy":[],"likes":null,"sharedPost":null,"reframes":[],"noindex":null,"isRecommended":null,"permalink":"http://gemtest.kinja.com/gawker-1687581385","permalinkHost":"http://gemtest.kinja.com","permalinkPath":"/gawker-1687581385","display":"<p
-        class=\"first-text\">[<a href=\"http://gawker.com/no-playlist-1685415865\"
-        target=\"_blank\">Gawker</a><inset id=\"1685415865\"></inset>]</p><!-- core-decorated
-        -->","excerpt":"<p class=\"first-text\">[<a href=\"http://gawker.com/no-playlist-1685415865\"
-        target=\"_blank\">Gawker</a>]</p>","compact":"[Gawker]...","plaintext":"[Gawker]","shortHeadline":"","shortExcerpt":"<p
-        class=\"first-text\">[<a href=\"http://gawker.com/no-playlist-1685415865\"
-        target=\"_blank\">Gawker</a>]</p>","excerptWithAssets":"<p class=\"first-text\">[<a
-        href=\"http://gawker.com/no-playlist-1685415865\" target=\"_blank\">Gawker</a>\n
-        <inset id=\"1685415865\"></inset>]</p>","aboveHeadline":null,"leftOfHeadline":null,"firstAsset":"","length":8,"postId":1687581385,"isBlip":true,"sharingMainImage":null,"facebookImage":null,"decorationFlags":["Default"],"publishTime":{"timestamp":1426537477797,"timezone":"America/New_York","MdyHm":"03/16/2015
-        16:24","MdyatHm":"03/16/2015 at 16:24","rfc822":"Mon, 16 Mar 2015 20:24:37
-        GMT","yMdHmsZ":"2015-03-16T16:24:37-04:00","hmma":"4:24pm","day":"Monday","Mddyyhmma":"3/16/15
-        4:24pm","fullDate":"March 16, 2015","relative":{"amount":null,"type":"now"}},"authorBlogName":"gemtest"}}'
+      string: "\t<!DOCTYPE html><!--[if lt IE 8]>\t <html class=\"no-js lt-ie9 lt-ie8
+        lt-ie7\" lang=\"en-US\"> <![endif]--><!--[if IE 8]>\t  <html class=\"no-js
+        lt-ie9\" lang=\"en-US\"> <![endif]--><!--[if gt IE 8]><!--> <html class=\"no-js\"
+        lang=\"en-US\"> <!--<![endif]--><!-- THIS IS OVERLORD --><head><meta http-equiv=\"X-UA-Compatible\"
+        content=\"IE=11; IE=10; IE=9; IE=8; IE=EDGE\" /><script async type=\"text/javascript\"
+        src=\"http://kinja.com/api/profile/assets/javascripts/sso.js\"></script>\n\t<script
+        type=\"text/javascript\">\n\t\tvar _sf_startpt=(new Date()).getTime();\n\t\tif
+        (typeof(performance) !== 'undefined' && typeof performance.now === 'function')
+        {\n\t\t\tvar _kinjaperf_start = performance.now();\n\t\t}\n\t</script>\n\t\t\n\t<script
+        type=\"text/javascript\">\n\t\t(function () {\n\t\t  var w = typeof window
+        != 'undefined' ? window : exports,\n\t\t\t  marks = [];\n\t\t  w.performance
+        || (w.performance = {});\n\t\t  w.performance.now || (\n\t\t\tw.performance.now
+        = performance.now || performance.webkitNow ||\n\t\t\t\t\t\t\t\t\t performance.msNow
+        || performance.mozNow);\n\t\t  if (!w.performance.now){\n\t\t\tvar s = Date.now
+        ? Date.now() : +(new Date());\n\t\t\tif (performance.timing && performance.timing)\n\t\t\t
+        \ s = performance.timing.navigationStart\n\t\t\tw.performance.now = (function(){\n\t\t\t
+        \ var n = Date.now ? Date.now() : +(new Date());\n\t\t\t  return n-s;\n\t\t\t});\n\t\t
+        \ }\n\t\t  w.performance.mark || (\n\t\t  w.performance.mark =\n\t\t\tw.performance.webkitMark
+        ? w.performance.webkitMark :\n\t\t\t(function (l) {\n\t\t\t  marks.push({'name':
+        l, 'entryType': 'mark', 'startTime': w.performance.now(), 'duration':0 });\n\t\t\t}));\n\t\t
+        \ w.performance.getEntriesByType || (\n\t\t  w.performance.getEntriesByType
+        =\n\t\t\tw.performance.webkitGetEntriesByType ? w.performance.webkitGetEntriesByType
+        :\n\t\t\t(function (t) {\n\t\t\t  return t == 'mark' ? marks : [];\n\t\t\t}));\n\t\t
+        \ w.performance.clearMarks || (\n\t\t\tw.performance.clearMarks = w.performance.webkitClearMarks
+        ? w.performance.webkitClearMarks :\n\t\t\t(function () {\n\t\t\t  marks =
+        [];\n\t\t\t}));\n\t\t  w.markUserTime = function(l) {\n\t\t\tsetTimeout(function()
+        {\n\t\t\t\tif (typeof w.performance.mark === 'function') {\n\t\t\t\t\tw.performance.mark(l);\n\t\t\t\t}\n\t\t\t\tif
+        (w.console && w.console.timeStamp) {\n\t\t\t\t\tw.console.timeStamp(l);\n\t\t\t\t}\n\t\t\t},
+        0);\n\t\t  };\n\n\t\t}());\n\t</script>\n\t\t<script>\n\twindow.Krux || ((Krux
+        = function () {\n\t\tKrux.q.push(arguments);\n\t}).q = []);\n\t(function ()
+        {\n\t\tfunction retrieve(n) {\n\t\t\tvar m, k = 'kx' + n;\n\t\t\tif (window.localStorage)
+        {\n\t\t\t\treturn window.localStorage[k] || \"\";\n\t\t\t} else if (navigator.cookieEnabled)
+        {\n\t\t\t\tm = document.cookie.match(k + '=([^;]*)');\n\t\t\t\treturn (m &&
+        unescape(m[1])) || \"\";\n\t\t\t} else {\n\t\t\t\treturn '';\n\t\t\t}\n\t\t}\n\t\tKrux.user
+        = retrieve('user');\n\t\tKrux.segments = retrieve('segs') && retrieve('segs').split(',')
+        || [];\n\t})();\n\t</script><!-- Included CSS Files --><link rel=\"stylesheet\"
+        href=\"http://x.kinja-static.com/assets/stylesheets/tiger-c8b6d45b88e107435c30d5ec17f43c54.css\"><meta
+        name=\"dynamic-stylesheet\" id=\"editor-css-url\" content=\"http://x.kinja-static.com/assets/stylesheets/editor-fd8c41bef45b060a8bd99903248a933a.css\"><!--
+        Site specific colors -->\t<style type=\"text/css\"></style><meta name=\"google-site-verification\"
+        content=\"P13oAn8o8LB6FVCJWKsHWXvxfbR-SJrmvox6EgULpUs\" /><!-- IE Fix for
+        HTML5 Tags --><!--[if lte IE 9]><script src=\"http://html5shiv.googlecode.com/svn/trunk/html5.js\"></script><![endif]--><meta
+        charset=\"utf-8\" /><!-- Set the viewport width to device width for mobile
+        --><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0,
+        minimum-scale=1.0,maximum-scale=10.0\" /><meta name=\"ROBOTS\" content=\"INDEX,
+        FOLLOW\" /><title>Kinja</title><!-- favicon and touch icons --><link rel=\"shortcut
+        icon\" href=\"http://x.kinja-static.com/assets/images/logos/favicons/default.ico\"
+        /><link rel=\"apple-touch-icon\" href=\"http://x.kinja-static.com/assets/images/logos/touchicons/default-touch-icon-200x200.png\"
+        /><meta name=\"msapplication-square70x70logo\" content=\"http://x.kinja-static.com/assets/images/logos/touchicons/default-touch-icon-72x72.png\"
+        /><meta name=\"msapplication-square150x150logo\" content=\"http://x.kinja-static.com/assets/images/logos/touchicons/default-touch-icon-200x200.png\"
+        /><!-- rss --><!-- Open Graph/Facebook headers --><meta property=\"og:title\"
+        content=\"Kinja\" /><meta property=\"og:type\" content=\"blog\" /><meta property=\"og:image\"
+        content=\"http://kinja.com/assets/images/logos/touchicons/default-touch-icon-200x200.png\"
+        /><meta name=\"twitter:card\" content=\"summary_large_image\"><meta name=\"twitter:site\"
+        content=\"@kinja\"><meta name=\"twitter:title\" content=\"Kinja\"><meta name=\"twitter:description\"
+        content=\"\"><meta property=\"og:description\" content=\"\" /><meta name=\"description\"
+        content=\"\" /><meta property=\"og:locale\" content=\"en_US\" /><meta property=\"og:site_name\"
+        content=\"Kinja.com\" /></head><body class=\"f_ads_controller_on f_amazon_matchbuy_on
+        f_amazon_selective_clientside_render_on f_analyticstracking_on f_bigpic_share_on
+        f_biztools_blogname_on f_black_search_icon_on f_cda_on_hash_on f_coredecorators_on
+        f_coreinsets_on f_crossdomainanalytics_on f_editor_dst_fix_on f_editor_timezone_fix_on
+        f_foobar_foo f_footer_new_chartbeat_on f_foreplay_copy_update_on f_gnc_on
+        f_gns_on f_gnx_on f_grecaptcha_on f_groupchats_rendering_performance_on f_hide_pending_replies_on
+        f_hideownfollows_on f_iframe_resize_on f_large_post_performance_on f_limit_draft_controls_on
+        f_longer_permalink_cache_time_1800_on f_moatads_headertag_on f_moatads_promoted_on
+        f_mobile_ad_prototypes_on f_mobile_ad_prototypes_permalink_on f_multioauth_on
+        f_new_editor_css_on f_new_editor_dst_fix_on f_new_editor_message_on f_newblogproperties_on
+        f_newbuttons_on f_newfollowlists_on f_newnav_on f_no_follow_pending_on f_permalinkservice_inviteservice_on
+        f_permalinkservice_showcaseurl_on f_pinterest_on f_popular_6_on f_post_completion_on
+        f_pre_share_view_on f_privateview_to_dashboard_on f_promoted_touch_on f_purge_permalink_on_update_on
+        f_raven_on f_recommended_footer_on f_redactor_on f_remove_spinner_on f_round_avatars_on
+        f_s3assets_on f_scheduled_shares_on f_scribe_paragraphize_formatter_on f_sha_amazon_links_subtags_on
+        f_simplereach_expanded_on f_tablet_popular_on f_throttle_measuring_off f_throttle_test_foo_lorem
+        f_twitter_embed_fix_on f_uidimages_on f_universalanalytics_on f_userstats_on
+        f_viewstats_via_service_on k_liveblog_appRevision_1 k_liveblog_pollIntervalMillis_10000
+        k_maintenance_off en-US \"><div class=\"success-messages\" id=\"js_success-box-container\"></div><div
+        id=\"js_off-canvas-wrap\" class=\"off-canvas-wrap\" data-offcanvas><div class=\"inner-wrap\"><aside
+        class=\"left-off-canvas-menu show-for-medium-down proxima nav-dropdown main-menu\">\t<div
+        id=\"js_blogmenu--offcanvas\"><div class=\"search show-for-medium-down\">\t<form
+        method=\"GET\" class=\"search search-simple\" action=\"/search\" onsubmit=\"window.ga('send',
+        'event', 'Search', 'Submit', 'error');\"><div class=\"input-with-icon\"><span
+        class=\"icon icon-search-alt-thin\"></span><input type=\"text\" placeholder=\"Search
+        Kinja\" name=\"q\" class=\"mbn\" autocomplete=\"off\" data-focus-on-display/></div></form></div><div
+        class=\"divider show-for-medium-down\"></div><div class=\"js_login-links show-for-medium-down\"></div><ul
+        class=\"gmg-blog-list\"><li class=\"title\">Blogs you may like</li>\t<li><a
+        href=\"http://deadspin.com\" data-ga=\"[Kinja Menu, Blogs You May Like Click,
+        Deadspin]\"><span class=\"icon icon-prepend icon-sprite site-icon site-icon-deadspin\"></span>Deadspin</a></li><li><a
+        href=\"http://gawker.com\" data-ga=\"[Kinja Menu, Blogs You May Like Click,
+        Gawker]\"><span class=\"icon icon-prepend icon-sprite site-icon site-icon-gawker\"></span>Gawker</a></li><li><a
+        href=\"http://gizmodo.com\" data-ga=\"[Kinja Menu, Blogs You May Like Click,
+        Gizmodo]\"><span class=\"icon icon-prepend icon-sprite site-icon site-icon-gizmodo\"></span>Gizmodo</a></li><li><a
+        href=\"http://io9.com\" data-ga=\"[Kinja Menu, Blogs You May Like Click, io9]\"><span
+        class=\"icon icon-prepend icon-sprite site-icon site-icon-io9\"></span>io9</a></li><li><a
+        href=\"http://jalopnik.com\" data-ga=\"[Kinja Menu, Blogs You May Like Click,
+        Jalopnik]\"><span class=\"icon icon-prepend icon-sprite site-icon site-icon-jalopnik\"></span>Jalopnik</a></li><li><a
+        href=\"http://jezebel.com\" data-ga=\"[Kinja Menu, Blogs You May Like Click,
+        Jezebel]\"><span class=\"icon icon-prepend icon-sprite site-icon site-icon-jezebel\"></span>Jezebel</a></li><li><a
+        href=\"http://kotaku.com\" data-ga=\"[Kinja Menu, Blogs You May Like Click,
+        Kotaku]\"><span class=\"icon icon-prepend icon-sprite site-icon site-icon-kotaku\"></span>Kotaku</a></li><li><a
+        href=\"http://lifehacker.com\" data-ga=\"[Kinja Menu, Blogs You May Like Click,
+        Lifehacker]\"><span class=\"icon icon-prepend icon-sprite site-icon site-icon-lifehacker\"></span>Lifehacker</a></li><li><a
+        href=\"http://sploid.gizmodo.com/\" data-ga=\"[Kinja Menu, Blogs You May Like
+        Click, Sploid]\"><span class=\"icon icon-prepend icon-sprite site-icon site-icon-sploid\"></span>Sploid</a></li></ul></div><div
+        class=\"divider\"></div></aside><aside class=\"right-off-canvas-menu show-for-medium-down
+        proxima nav-dropdown\">\t<dl class=\"tabs row\" data-tab><dd class=\"js_notif-tab
+        tab-title small-6 columns\"><a href=\"#js_notifications--offcanvas\">Notifications</a></dd><dd
+        class=\"js_username-tab tab-title active small-6 columns\"><a href=\"#js_usermenu--offcanvas\"
+        class=\"js_username\">Username</a></dd></dl><div class=\"tabs-content\"><div
+        class=\"content notif-menu js_notif-panel\" id=\"js_notifications--offcanvas\"><div
+        class=\"divider\"></div></div><div class=\"content active\" id=\"js_usermenu--offcanvas\"><div
+        class=\"divider\"></div></div></div></aside><a class=\"exit-off-canvas\"></a>\t<!--
+        \ md5!  --><nav class=\"js_global-nav-wrap js_top-nav global-nav\"><div class=\"global-nav__left
+        global-nav__triggers\"><a class=\"left-off-canvas-toggle hamburger-trigger\"
+        data-ga=\"[Kinja Menu, Menu Click, js_pageType]\"><span class=\"icon-dustinburger\"><span></span><span></span><span></span></span></a><a
+        data-dropdown=\"global-blog\" class=\"js_menu-button hamburger-trigger hamburger-trigger--desktop\"
+        data-ga=\"[Kinja Menu, Menu Click, js_pageType]\"><span class=\"icon-dustinburger\"><span></span><span></span><span></span></span></a><a
+        href=\"#\" id=\"global-search-trigger\" class=\"search-trigger\" data-dropdown=\"global-search\"
+        data-ga=\"[Kinja Menu, Search Click, js_pageType]\"><span class=\"icon icon-search-alt-thin\"></span></a></div><div
+        class=\"global-nav__right global-nav__triggers js_right-user-bar\"></div><div
+        class=\"global-nav__center row\"><div class=\"logo-wrapper large-6 columns
+        large-offset-4\"><a href=\"/\" class=\"logo\" title=\"\" data-ga=\"[Kinja
+        Menu, Logo/Blog Title Click, js_pageType]\"></a></div></div><div class=\"proxima
+        f-dropdown content nav-dropdown main-menu hide-for-medium-down \" id=\"global-blog\"
+        data-dropdown-content><div id=\"js_blogmenu--dropdown\"><div class=\"search
+        show-for-medium-down\">\t<form method=\"GET\" class=\"search search-simple\"
+        action=\"/search\" onsubmit=\"window.ga('send', 'event', 'Search', 'Submit',
+        'error');\"><div class=\"input-with-icon\"><span class=\"icon icon-search-alt-thin\"></span><input
+        type=\"text\" placeholder=\"Search Kinja\" name=\"q\" class=\"mbn\" autocomplete=\"off\"
+        data-focus-on-display/></div></form></div><div class=\"divider show-for-medium-down\"></div><div
+        class=\"js_login-links show-for-medium-down\"></div><ul class=\"gmg-blog-list\"><li
+        class=\"title\">Blogs you may like</li>\t<li><a href=\"http://deadspin.com\"
+        data-ga=\"[Kinja Menu, Blogs You May Like Click, Deadspin]\"><span class=\"icon
+        icon-prepend icon-sprite site-icon site-icon-deadspin\"></span>Deadspin</a></li><li><a
+        href=\"http://gawker.com\" data-ga=\"[Kinja Menu, Blogs You May Like Click,
+        Gawker]\"><span class=\"icon icon-prepend icon-sprite site-icon site-icon-gawker\"></span>Gawker</a></li><li><a
+        href=\"http://gizmodo.com\" data-ga=\"[Kinja Menu, Blogs You May Like Click,
+        Gizmodo]\"><span class=\"icon icon-prepend icon-sprite site-icon site-icon-gizmodo\"></span>Gizmodo</a></li><li><a
+        href=\"http://io9.com\" data-ga=\"[Kinja Menu, Blogs You May Like Click, io9]\"><span
+        class=\"icon icon-prepend icon-sprite site-icon site-icon-io9\"></span>io9</a></li><li><a
+        href=\"http://jalopnik.com\" data-ga=\"[Kinja Menu, Blogs You May Like Click,
+        Jalopnik]\"><span class=\"icon icon-prepend icon-sprite site-icon site-icon-jalopnik\"></span>Jalopnik</a></li><li><a
+        href=\"http://jezebel.com\" data-ga=\"[Kinja Menu, Blogs You May Like Click,
+        Jezebel]\"><span class=\"icon icon-prepend icon-sprite site-icon site-icon-jezebel\"></span>Jezebel</a></li><li><a
+        href=\"http://kotaku.com\" data-ga=\"[Kinja Menu, Blogs You May Like Click,
+        Kotaku]\"><span class=\"icon icon-prepend icon-sprite site-icon site-icon-kotaku\"></span>Kotaku</a></li><li><a
+        href=\"http://lifehacker.com\" data-ga=\"[Kinja Menu, Blogs You May Like Click,
+        Lifehacker]\"><span class=\"icon icon-prepend icon-sprite site-icon site-icon-lifehacker\"></span>Lifehacker</a></li><li><a
+        href=\"http://sploid.gizmodo.com/\" data-ga=\"[Kinja Menu, Blogs You May Like
+        Click, Sploid]\"><span class=\"icon icon-prepend icon-sprite site-icon site-icon-sploid\"></span>Sploid</a></li></ul></div></div><div
+        class=\"f-dropdown content nav-dropdown search-dropdown hide-for-medium-down\"
+        id=\"global-search\" data-dropdown-content><form method=\"GET\" action=\"/search\"
+        data-ga=\"[Search, Submit, js_pageType]\"><div class=\"input-with-icon\"><span
+        class=\"icon icon-search-alt-thin\"></span><input id=\"global-search-input\"
+        type=\"search\" name=\"q\" placeholder=\"Search Kinja\" autocomplete=\"off\"
+        /></div></form></div><div class=\"proxima f-dropdown nav-dropdown content
+        notif-menu\" id=\"js_notifications--dropdown\" data-dropdown-content></div><div
+        class=\"js_global-user scrollable-container noskimlinks noskimwords\"><div
+        class=\"proxima f-dropdown nav-dropdown content user-menu user-menu--mobile\"
+        id=\"js_usermenu--dropdown\" data-dropdown-content></div></div></nav>\t\n\t<script
+        type=\"text/javascript\">\n\t\tvar readOnlyRequest;\n\t\tvar cn = \"read-only\";\n\t\tvar
+        cacheBusterParam = \"?cb=\" + Math.floor(Date.now() / 60000); // update every
+        minute\n\t\tvar setReadOnly = function () {\n\t\t\tdocument.body.className
+        = (document.body.className === '') ? cn : document.body.className + ' ' +
+        cn;\n\t\t};\n\t\tif (window.XMLHttpRequest) {\n\t\t\treadOnlyRequest = new
+        XMLHttpRequest();\n\t\t} else if (window.ActiveXObject) {\n\t\t\treadOnlyRequest
+        = new ActiveXObject(\"Microsoft.XMLHTTP\");\n\t\t}\n\t\treadOnlyRequest.onreadystatechange
+        = function() {\n\t\t\tif (readOnlyRequest.readyState == 4 && readOnlyRequest.status
+        >= 500 && readOnlyRequest.status < 600) {\n\t\t\t\tsetReadOnly();\n\t\t\t}\n\t\t};\n
+        \   \treadOnlyRequest.open('GET', \"/ajax/readOnlyMode\" + cacheBusterParam);\n
+        \   \treadOnlyRequest.send();\n\t</script>\n\t<div class=\"row page\"><div
+        class=\"columns\">\t\t<script type=\"text/javascript\">(function () {window.kinja
+        = window.kinja || {}; window.kinja.error = JSON.parse(decodeURIComponent(
+        '%7B%22status%22%3A404%7D' ));}());</script><div class=\"row\"><div class=\"medium-4
+        push-4 columns\"><div class=\"panel page-error text-center\"><a href=\"http://kinja.com/\"
+        class=\"logo\"></a><h1>404 / 1Path apicore/post/1687581385/update not found</h1></div></div></div></div></div>\t<div
+        style=\"display:none;\" id=\"read-only-warning\"><div class=\"row\"><div class=\"column
+        small-12\">Kinja is in read-only mode. We are working to restore service.</div></div></div><div
+        id=\"trackers\" style=\"display: none;\"></div><script type=\"text/javascript\">\n\t\tDate.now
+        = Date.now || function() { return +new Date; };\n\t\twindow.statsdTicks =
+        [{\n\t\t\tms: Date.now(),\n\t\t\tmessage: \"JS init reached\",\n\t\t\treporting:
+        false\n\t\t}];\n\t\t</script><script>markUserTime(\"JS - Before Require load\");</script><script
+        type=\"text/javascript\" src=\"http://x.kinja-static.com/assets/javascripts/lib/require.js?2\"></script><script
+        type=\"text/javascript\">(function () {window.kinja = window.kinja || {};
+        window.kinja.meta = JSON.parse(decodeURIComponent( '%7B%22cloudinaryRequest%22%3A%7B%22default%22%3A%7B%22eager%22%3A%22c_fill%2Cfl_progressive%2Cg_center%2Ch_180%2Cq_80%2Cw_320%7Cc_fit%2Cfl_progressive%2Cq_80%2Cw_600%7Cc_fill%2Cfl_progressive%2Cg_center%2Ch_100%2Cq_80%2Cw_100%7Cc_fill%2Cfl_progressive%2Cg_center%2Ch_77%2Cq_80%2Cw_137%7Cc_fit%2Cfl_progressive%2Cq_80%2Cw_600%7Cc_fill%2Cfl_progressive%2Cg_north%2Ch_264%2Cq_80%2Cw_470%7Cc_fill%2Cfl_progressive%2Cg_center%2Ch_358%2Cq_80%2Cw_636%7Cc_fill%2Cfl_progressive%2Cg_north%2Ch_264%2Cq_80%2Cw_470%7Cc_fill%2Cfl_progressive%2Cg_center%2Ch_77%2Cq_80%2Cw_137%7Cc_fill%2Cfl_progressive%2Cg_north%2Ch_77%2Cq_80%2Cw_137%7Cc_fill%2Cfl_progressive%2Cg_center%2Ch_120%2Cq_80%2Cw_120%7Cc_fit%2Cfl_progressive%2Cq_80%2Cw_636%7Cc_fill%2Cfl_progressive%2Cg_north%2Ch_77%2Cq_80%2Cw_137%7Cc_fill%2Cfl_progressive%2Cg_north%2Ch_358%2Cq_80%2Cw_636%7Cc_fit%2Cfl_progressive%2Cq_80%2Cw_470%7Cc_fill%2Cfl_progressive%2Cg_center%2Ch_80%2Cq_80%2Cw_80%7Cc_fill%2Cfl_progressive%2Cg_north%2Ch_180%2Cq_80%2Cw_320%7Cc_fill%2Cfl_progressive%2Cg_north%2Ch_180%2Cq_80%2Cw_320%7Cc_fit%2Cfl_progressive%2Cq_80%2Cw_320%7Cc_fill%2Cfl_progressive%2Cg_center%2Ch_120%2Cq_80%2Cw_120%7Cc_fill%2Cfl_progressive%2Cg_center%2Ch_200%2Cq_80%2Cw_200%7Cc_fill%2Cfl_progressive%2Cg_faces%2Ch_77%2Cq_80%2Cw_137%7Cc_fill%2Cfl_progressive%2Cg_faces%2Ch_77%2Cq_80%2Cw_137%7Cc_fill%2Cfl_progressive%2Cg_center%2Ch_80%2Cq_80%2Cw_80%7C%7Cc_fill%2Cfl_progressive%2Cg_north%2Ch_358%2Cq_80%2Cw_636%7Cc_fit%2Cfl_progressive%2Cq_80%2Cw_470%7Cc_fill%2Cfl_progressive%2Cg_center%2Ch_100%2Cq_80%2Cw_100%7Cc_fit%2Cfl_progressive%2Ch_100%2Cq_80%2Cw_75%7Cc_fill%2Cfl_progressive%2Cg_center%2Ch_200%2Cq_80%2Cw_200%7Cc_fit%2Cfl_progressive%2Cq_80%2Cw_636%7Cc_fit%2Cfl_progressive%2Cq_80%2Cw_320%7Cc_fit%2Cfl_progressive%2Ch_100%2Cq_80%2Cw_75%7Cc_fill%2Cfl_progressive%2Cg_center%2Ch_358%2Cq_80%2Cw_636%7Cc_fill%2Cfl_progressive%2Cg_center%2Ch_180%2Cq_80%2Cw_320%7C%22%2C%22timestamp%22%3A%221428956361%22%2C%22signature%22%3A%2207428d82668a99fe2f85be66202a7534c442c44e%22%2C%22api_key%22%3A%22196565315244936%22%2C%22eager_async%22%3A%22true%22%7D%2C%22gif%22%3A%7B%22eager%22%3A%22c_fill%2Cfl_progressive%2Cg_center%2Ch_180%2Cq_80%2Cw_320%7Cc_fit%2Cfl_progressive%2Cq_80%2Cw_600%7Cc_fill%2Cfl_progressive%2Cg_center%2Ch_100%2Cq_80%2Cw_100%7Cc_fill%2Cfl_progressive%2Cg_center%2Ch_77%2Cq_80%2Cw_137%7Cc_fit%2Cfl_progressive%2Cq_80%2Cw_600%7Cc_fill%2Cfl_progressive%2Cg_north%2Ch_264%2Cq_80%2Cw_470%7Cc_fill%2Cfl_progressive%2Cg_center%2Ch_358%2Cq_80%2Cw_636%7Cc_fill%2Cfl_progressive%2Cg_north%2Ch_264%2Cq_80%2Cw_470%7Cc_fill%2Cfl_progressive%2Cg_center%2Ch_77%2Cq_80%2Cw_137%7Cc_fill%2Cfl_progressive%2Cg_north%2Ch_77%2Cq_80%2Cw_137%7Cc_fill%2Cfl_progressive%2Cg_center%2Ch_120%2Cq_80%2Cw_120%7Cc_fit%2Cfl_progressive%2Cq_80%2Cw_636%7Cc_fill%2Cfl_progressive%2Cg_north%2Ch_77%2Cq_80%2Cw_137%7Cc_fill%2Cfl_progressive%2Cg_north%2Ch_358%2Cq_80%2Cw_636%7Cc_fit%2Cfl_progressive%2Cq_80%2Cw_470%7Cc_fill%2Cfl_progressive%2Cg_center%2Ch_80%2Cq_80%2Cw_80%7Cc_fill%2Cfl_progressive%2Cg_north%2Ch_180%2Cq_80%2Cw_320%7Cc_fill%2Cfl_progressive%2Cg_north%2Ch_180%2Cq_80%2Cw_320%7Cc_fit%2Cfl_progressive%2Cq_80%2Cw_320%7Cc_fill%2Cfl_progressive%2Cg_center%2Ch_120%2Cq_80%2Cw_120%7Cc_fill%2Cfl_progressive%2Cg_center%2Ch_200%2Cq_80%2Cw_200%7Cc_fill%2Cfl_progressive%2Cg_faces%2Ch_77%2Cq_80%2Cw_137%7Cc_fill%2Cfl_progressive%2Cg_faces%2Ch_77%2Cq_80%2Cw_137%7Cc_fill%2Cfl_progressive%2Cg_center%2Ch_80%2Cq_80%2Cw_80%7C%7Cc_fill%2Cfl_progressive%2Cg_north%2Ch_358%2Cq_80%2Cw_636%7Cc_fit%2Cfl_progressive%2Cq_80%2Cw_470%7Cc_fill%2Cfl_progressive%2Cg_center%2Ch_100%2Cq_80%2Cw_100%7Cc_fit%2Cfl_progressive%2Ch_100%2Cq_80%2Cw_75%7Cc_fill%2Cfl_progressive%2Cg_center%2Ch_200%2Cq_80%2Cw_200%7Cc_fit%2Cfl_progressive%2Cq_80%2Cw_636%7Cc_fit%2Cfl_progressive%2Cq_80%2Cw_320%7Cc_fit%2Cfl_progressive%2Ch_100%2Cq_80%2Cw_75%7Cc_fill%2Cfl_progressive%2Cg_center%2Ch_358%2Cq_80%2Cw_636%7Cc_fill%2Cfl_progressive%2Cg_center%2Ch_180%2Cq_80%2Cw_320%7C%22%2C%22timestamp%22%3A%221428956361%22%2C%22tags%22%3A%22gif%22%2C%22signature%22%3A%22df1170ebb69763f274231c7c4ea023bb37117bea%22%2C%22api_key%22%3A%22196565315244936%22%2C%22eager_async%22%3A%22true%22%7D%7D%2C%22syncFeatures%22%3Anull%2C%22featuresLastUpdate%22%3A1428938191804%2C%22killswitches%22%3A%7B%22liveblog.pollIntervalMillis%22%3A%7B%22name%22%3A%22liveblog.pollIntervalMillis%22%2C%22value%22%3A%2210000%22%2C%22defaultValue%22%3A%2210000%22%2C%22meta%22%3Anull%7D%2C%22liveblog.appRevision%22%3A%7B%22name%22%3A%22liveblog.appRevision%22%2C%22value%22%3A%221%22%2C%22defaultValue%22%3A%221%22%2C%22meta%22%3Anull%7D%2C%22maintenance%22%3A%7B%22name%22%3A%22maintenance%22%2C%22value%22%3A%22off%22%2C%22defaultValue%22%3A%22off%22%2C%22meta%22%3Anull%7D%7D%2C%22mode%22%3A%22live%22%2C%22pageType%22%3A%22error%22%2C%22currentUrl%22%3A%22%2Fapicore%2Fpost%2F1687581385%2Fupdate%3Ftoken%3Dcf039981-df6b-4fa2-b1f7-5a6cd86ee28f%22%2C%22locale%22%3A%22en-US%22%2C%22localeWithUnderscore%22%3A%22en_US%22%2C%22imageSizes%22%3A%7B%22KinjaCenteredMedium%22%3A%7B%22width%22%3A320%2C%22height%22%3A180%2C%22crop%22%3A%22fill%22%2C%22gravity%22%3A%22center%22%2C%22flags%22%3A%22progressive%22%2C%22quality%22%3A80%7D%2C%22blg-logo%22%3A%7B%22width%22%3A600%2C%22crop%22%3A%22fit%22%2C%22flags%22%3A%22progressive%22%2C%22quality%22%3A80%7D%2C%22blg-avt-%22%3A%7B%22width%22%3A100%2C%22height%22%3A100%2C%22crop%22%3A%22fill%22%2C%22gravity%22%3A%22center%22%2C%22flags%22%3A%22progressive%22%2C%22quality%22%3A80%7D%2C%22kc-small%22%3A%7B%22width%22%3A137%2C%22height%22%3A77%2C%22crop%22%3A%22fill%22%2C%22gravity%22%3A%22center%22%2C%22flags%22%3A%22progressive%22%2C%22quality%22%3A80%7D%2C%22BlogLogo%22%3A%7B%22width%22%3A600%2C%22crop%22%3A%22fit%22%2C%22flags%22%3A%22progressive%22%2C%22quality%22%3A80%7D%2C%22k-large%22%3A%7B%22width%22%3A470%2C%22height%22%3A264%2C%22crop%22%3A%22fill%22%2C%22gravity%22%3A%22north%22%2C%22flags%22%3A%22progressive%22%2C%22quality%22%3A80%7D%2C%22kc-xlarge%22%3A%7B%22width%22%3A636%2C%22height%22%3A358%2C%22crop%22%3A%22fill%22%2C%22gravity%22%3A%22center%22%2C%22flags%22%3A%22progressive%22%2C%22quality%22%3A80%7D%2C%22KinjaLarge%22%3A%7B%22width%22%3A470%2C%22height%22%3A264%2C%22crop%22%3A%22fill%22%2C%22gravity%22%3A%22north%22%2C%22flags%22%3A%22progressive%22%2C%22quality%22%3A80%7D%2C%22KinjaCenteredSmall%22%3A%7B%22width%22%3A137%2C%22height%22%3A77%2C%22crop%22%3A%22fill%22%2C%22gravity%22%3A%22center%22%2C%22flags%22%3A%22progressive%22%2C%22quality%22%3A80%7D%2C%22k-small%22%3A%7B%22width%22%3A137%2C%22height%22%3A77%2C%22crop%22%3A%22fill%22%2C%22gravity%22%3A%22north%22%2C%22flags%22%3A%22progressive%22%2C%22quality%22%3A80%7D%2C%22AvatarMedium%22%3A%7B%22width%22%3A120%2C%22height%22%3A120%2C%22crop%22%3A%22fill%22%2C%22gravity%22%3A%22center%22%2C%22flags%22%3A%22progressive%22%2C%22quality%22%3A80%7D%2C%22ku-xlarge%22%3A%7B%22width%22%3A636%2C%22crop%22%3A%22fit%22%2C%22flags%22%3A%22progressive%22%2C%22quality%22%3A80%7D%2C%22KinjaSmall%22%3A%7B%22width%22%3A137%2C%22height%22%3A77%2C%22crop%22%3A%22fill%22%2C%22gravity%22%3A%22north%22%2C%22flags%22%3A%22progressive%22%2C%22quality%22%3A80%7D%2C%22KinjaExtraLarge%22%3A%7B%22width%22%3A636%2C%22height%22%3A358%2C%22crop%22%3A%22fill%22%2C%22gravity%22%3A%22north%22%2C%22flags%22%3A%22progressive%22%2C%22quality%22%3A80%7D%2C%22ku-large%22%3A%7B%22width%22%3A470%2C%22crop%22%3A%22fit%22%2C%22flags%22%3A%22progressive%22%2C%22quality%22%3A80%7D%2C%22avt-small%22%3A%7B%22width%22%3A80%2C%22height%22%3A80%2C%22crop%22%3A%22fill%22%2C%22gravity%22%3A%22center%22%2C%22flags%22%3A%22progressive%22%2C%22quality%22%3A80%7D%2C%22k-medium%22%3A%7B%22width%22%3A320%2C%22height%22%3A180%2C%22crop%22%3A%22fill%22%2C%22gravity%22%3A%22north%22%2C%22flags%22%3A%22progressive%22%2C%22quality%22%3A80%7D%2C%22KinjaMedium%22%3A%7B%22width%22%3A320%2C%22height%22%3A180%2C%22crop%22%3A%22fill%22%2C%22gravity%22%3A%22north%22%2C%22flags%22%3A%22progressive%22%2C%22quality%22%3A80%7D%2C%22ku-medium%22%3A%7B%22width%22%3A320%2C%22crop%22%3A%22fit%22%2C%22flags%22%3A%22progressive%22%2C%22quality%22%3A80%7D%2C%22avt-medium%22%3A%7B%22width%22%3A120%2C%22height%22%3A120%2C%22crop%22%3A%22fill%22%2C%22gravity%22%3A%22center%22%2C%22flags%22%3A%22progressive%22%2C%22quality%22%3A80%7D%2C%22avt-large%22%3A%7B%22width%22%3A200%2C%22height%22%3A200%2C%22crop%22%3A%22fill%22%2C%22gravity%22%3A%22center%22%2C%22flags%22%3A%22progressive%22%2C%22quality%22%3A80%7D%2C%22k-thumb%22%3A%7B%22width%22%3A137%2C%22height%22%3A77%2C%22crop%22%3A%22fill%22%2C%22gravity%22%3A%22faces%22%2C%22flags%22%3A%22progressive%22%2C%22quality%22%3A80%7D%2C%22KinjaThumb%22%3A%7B%22width%22%3A137%2C%22height%22%3A77%2C%22crop%22%3A%22fill%22%2C%22gravity%22%3A%22faces%22%2C%22flags%22%3A%22progressive%22%2C%22quality%22%3A80%7D%2C%22AvatarSmall%22%3A%7B%22width%22%3A80%2C%22height%22%3A80%2C%22crop%22%3A%22fill%22%2C%22gravity%22%3A%22center%22%2C%22flags%22%3A%22progressive%22%2C%22quality%22%3A80%7D%2C%22original%22%3A%7B%7D%2C%22k-xlarge%22%3A%7B%22width%22%3A636%2C%22height%22%3A358%2C%22crop%22%3A%22fill%22%2C%22gravity%22%3A%22north%22%2C%22flags%22%3A%22progressive%22%2C%22quality%22%3A80%7D%2C%22KinjaUncroppedLarge%22%3A%7B%22width%22%3A470%2C%22crop%22%3A%22fit%22%2C%22flags%22%3A%22progressive%22%2C%22quality%22%3A80%7D%2C%22BlogAvatar%22%3A%7B%22width%22%3A100%2C%22height%22%3A100%2C%22crop%22%3A%22fill%22%2C%22gravity%22%3A%22center%22%2C%22flags%22%3A%22progressive%22%2C%22quality%22%3A80%7D%2C%22ku-inset%22%3A%7B%22width%22%3A75%2C%22height%22%3A100%2C%22crop%22%3A%22fit%22%2C%22flags%22%3A%22progressive%22%2C%22quality%22%3A80%7D%2C%22AvatarLarge%22%3A%7B%22width%22%3A200%2C%22height%22%3A200%2C%22crop%22%3A%22fill%22%2C%22gravity%22%3A%22center%22%2C%22flags%22%3A%22progressive%22%2C%22quality%22%3A80%7D%2C%22KinjaUncroppedExtraLarge%22%3A%7B%22width%22%3A636%2C%22crop%22%3A%22fit%22%2C%22flags%22%3A%22progressive%22%2C%22quality%22%3A80%7D%2C%22KinjaUncroppedMedium%22%3A%7B%22width%22%3A320%2C%22crop%22%3A%22fit%22%2C%22flags%22%3A%22progressive%22%2C%22quality%22%3A80%7D%2C%22KinjaUncroppedInset%22%3A%7B%22width%22%3A75%2C%22height%22%3A100%2C%22crop%22%3A%22fit%22%2C%22flags%22%3A%22progressive%22%2C%22quality%22%3A80%7D%2C%22KinjaCenteredExtraLarge%22%3A%7B%22width%22%3A636%2C%22height%22%3A358%2C%22crop%22%3A%22fill%22%2C%22gravity%22%3A%22center%22%2C%22flags%22%3A%22progressive%22%2C%22quality%22%3A80%7D%2C%22kc-medium%22%3A%7B%22width%22%3A320%2C%22height%22%3A180%2C%22crop%22%3A%22fill%22%2C%22gravity%22%3A%22center%22%2C%22flags%22%3A%22progressive%22%2C%22quality%22%3A80%7D%2C%22Original%22%3A%7B%7D%7D%2C%22imgassets%22%3A%22http%3A%2F%2Fx.kinja-static.com%2Fassets%2Fimages%2F%22%7D'
+        ));}());</script><script type=\"text/javascript\">(function () {/* This AMD
+        configuration is used in these contexts:1) in-browser2) build process3) tests*/(function
+        () {'use strict';/*globals requirejs, document */requirejs.config({bundles:
+        {'lib/scribe/scribe': ['scribe']},paths: (function () {var paths = {'html-janitor':
+        'lib/html-janitor',jquery: 'lib/jquery',underscore: 'lib/underscore',backbone:
+        'lib/backbone','backbone.marionette': 'lib/backbone.marionette','backbone.stickit':
+        'lib/backbone.stickit',moment: 'lib/amd-wrapped/momentjs/moment','moment-timezone':
+        'lib/amd-wrapped/momentjs/moment-timezone','jquery.tap': 'lib/amd-wrapped/tap.js/jquery.tap',ace:
+        'lib/ace','scribe-virtualdom': 'lib/scribe-virtualdom','scribe-plugin-heading-command':
+        'lib/scribe/plugins/scribe-plugin-heading-command','scribe-plugin-smart-lists':
+        'lib/scribe/plugins/scribe-plugin-smart-lists','scribe-plugin-blockquote-command':
+        'lib/scribe/plugins/scribe-plugin-blockquote-command','scribe-plugin-intelligent-unlink-command':
+        'lib/scribe/plugins/scribe-plugin-intelligent-unlink-command','scribe-plugin-formatter-html-ensure-semantic-elements':
+        'lib/scribe/plugins/scribe-plugin-formatter-html-ensure-semantic-elements','scribe-plugin-inline-styles-to-elements':
+        'lib/scribe/plugins/scribe-plugin-inline-styles-to-elements','scribe-plugin-keyboard-shortcuts':
+        'lib/scribe/plugins/scribe-plugin-keyboard-shortcuts','scribe-plugin-sanitizer':
+        'lib/scribe/plugins/scribe-plugin-sanitizer','scribe-plugin-code-command':
+        'lib/scribe/plugins/scribe-plugin-code-command','scribe-plugin-curly-quotes':
+        'lib/scribe/plugins/scribe-plugin-curly-quotes'};if (typeof document !== 'undefined')
+        {paths.templates = 'templates/closure/' + (document.getElementsByTagName('html')[0].getAttribute('lang')
+        || 'en-US');}return paths;}())});}());var modules = {\"BaseApp\": \"-08654293cb824e6ee2a2f3ee952016fa\",\"TagPageApp\":
+        \"-94fd35e32e3cffa6aadc77b349537024\",\"PromoteModalModule\": \"-2f56e918519465afdefd9f9fb67aa6c7\",\"FrontPageApp\":
+        \"-e3ae4c1ba8366f0383d38e512195ba54\",\"Main\": \"-cd06759836c970bbc07cb20021f8dcea\",\"PromotedPostPreview\":
+        \"-364247591333788b703963ef95eb06f2\",\"RuleSystem\": \"-23eadc96464620f5481d6511290b831b\",\"ProfilePageApp\":
+        \"-957949a04b39e399f19ee5029c2d846a\",\"ace\": \"-a486a39565033c80d86a498ff172dad1\",\"AmazonStats\":
+        \"-9ac5f9b843b1cf3f2be5b340f5a277c1\",\"GroupchatsModule\": \"-d3c6a4e5d685e7448269107e972cc18e\",\"KindrApp\":
+        \"-83312f48930a76fdbde9b9ff55d00234\",\"FeaturesPageApp\": \"-65a2703d1ced5c8caa6e8e1ec6dd081a\",\"LeaderboardStatsPageApp\":
+        \"-4fa5a9931415be0334fbd904dbcd2f68\",\"ScribeEditor\": \"-59417fc3aabad48e65408bd3ef30d37b\",\"PrivatePageApp\":
+        \"-aa278e80581f90424142984ff6daa663\",\"PostDebugPageApp\": \"-66624a179609dfb6e8673869392ec459\",\"PostApp\":
+        \"-c1a077c0a42e68e0a9826f4a8aa216a6\",\"DashboardPageApp\": \"-cc3428c8341731b13f269dff0b96add3\",\"StatsPageApp\":
+        \"-f268d90af93d49d91f999d347134484c\",\"FlaggedRepliesApp\": \"-cbf2defe2f24e2dd73491aeb68e932a4\",\"MarionetteEditor\":
+        \"-aca87a5b0286c0bc6a430cbc64da51bc\",\"AccountModalsModule\": \"-75026eae9c9a941485cddd9da1878c97\",\"BlacklistPageApp\":
+        \"-25b7ac8fde26807a5793b23dc62c7ee9\",\"JWPlayer\": \"-bcb2726c49022f1b0a79203da422279b\",\"GmgFeaturesPageApp\":
+        \"-7e76b05ad75e7cfef9cdea7872277190\",\"DiscussionModule\": \"-6be9a00e43687019b3c5beb76f934c49\",\"ErrorPageApp\":
+        \"-466ecff71d2139f24f646a434efdc8ad\",\"NotificationsPageApp\": \"-dc3ef91dae4efb9e394ebec76ed6b105\",\"TipsApp\":
+        \"-f721801b3fe0a1e84c76bbabb51058f2\",\"KinjaAnalytics\": \"-bafda53ecf504147e84c449043b4a14c\",\"KinjaFeedApp\":
+        \"-e7858b1e7eab22658d6b108a734645ab\",\"SearchPageApp\": \"-919f72d26b93698a1a92435c0d348b95\",\"Raven\":
+        \"-3467f3aed7fecb0be39f14c0d7095e44\",\"BusinessModule\": \"-984f7818f6fd772eea21008a170c3f8a\",\"UIKitApp\":
+        \"-a40559245cde4eda70101934ee8c39d4\",\"BlogSettingsModule\": \"-7f3473aceba4c79155b9c7e0041b0401\",\"StatsPerformanceApp\":
+        \"-3a7c60504bc19f7755c8e6140894bf24\"}, paths = {}, baseUrl = \"http://x.kinja-static.com/assets/javascripts-min/\",
+        modulePath = \"layer/\"; for (var module in modules) {if (modules.hasOwnProperty(module))
+        {paths[\"module/\" + module] = \"module/\" + module + \"-en-US\" + modules[module];
+        paths[\"layer/\" + module] = \"layer/\" + module + \"-en-US\" + modules[module];}}require.config({waitSeconds:
+        0, baseUrl: baseUrl, paths: paths, map: {\"*\": {\"config\": \"config\"}}});markUserTime(\"JS
+        - Before preload\"); require([modulePath + \"Main\", modulePath + \"BaseApp\"],
+        function () {markUserTime(\"JS - After preload\"); require([\"module/Main\"],
+        function () {markUserTime(\"JS - After app init\");});});}());</script><!--[if
+        gte IE 9]> --><script>require([\"module/Raven\"]);</script><!-- <![endif]--><div
+        class=\"reveal-modal-bg\"></div><div id=\"modalplaceholder\"></div></div></div></body></html>"
     http_version: 
-  recorded_at: Mon, 16 Mar 2015 20:24:38 GMT
+  recorded_at: Mon, 13 Apr 2015 20:19:24 GMT
 recorded_with: VCR 2.9.3

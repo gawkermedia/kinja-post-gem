@@ -1,19 +1,8 @@
-require_relative '../../lib/kinja'
-
-require 'vcr'
-VCR.configure do |config|
-  config.cassette_library_dir = "spec/fixtures/vcr_cassettes"
-  config.hook_into :webmock # or :fakeweb
-  config.allow_http_connections_when_no_cassette = true
-end
-
-require 'dotenv'
-ENV = Dotenv.load
+require 'spec_helper'
 
 describe Kinja do
-
   let(:kinja) {
-    Kinja::Client.new(
+    Kinja.new(
       user: ENV["USER"],
       password: ENV["PASS"]
   )
@@ -39,66 +28,4 @@ describe Kinja do
     end
   end
 
-  it "gets the author profile" do
-    VCR.use_cassette('author-path-er') do
-      blog_id = kinja.get_author(response["data"])["data"][0]["defaultBlogId"]
-      expect(blog_id).to eq 1634457255
-    end
-  end
-
-  it "gets the default blog id" do
-    VCR.use_cassette('author-path-er') do
-      blog_id = kinja.get_default_blog_id(response["data"])
-      expect(blog_id).to eq 1634457255
-    end
-  end
-
-  it "posts stuff" do
-    VCR.use_cassette('write-post') do
-      post = kinja.create_post(
-        headline: '',
-        body: '<p>[<a data-attr="http://gawker.com/no-playlist-1685415865" href="http://gawker.com/no-playlist-1685415865">Gawker</a>]</p>',
-        status: 'PUBLISHED',
-        replies: false
-      )
-      expect(post.code).to be 200
-    end
-  end
-
-  it "updates posts" do
-    VCR.use_cassette('update-post') do
-      link = "http://gemtest.kinja.com/gawker-1687581385"
-      post = kinja.update_post(link, publishTimeMillis: DateTime.now.strftime('%Q').to_i)
-    end
-  end
-
-  it "retrieves posts" do
-    VCR.use_cassette('get_post') do
-      post = kinja.get_post("1691726561")
-      expect(post["data"]["headline"][0...-1]).to eq "Is This Australian TV Anchor Wearing a Dick Or What?"
-    end
-
-    VCR.use_cassette('get_post') do
-      post = kinja.get_post("http://gawker.com/is-this-australian-tv-anchor-wearing-a-dick-or-what-1691726561")
-      expect(post["data"]["headline"][0...-1]).to eq "Is This Australian TV Anchor Wearing a Dick Or What?"
-    end
-  end
-
-  it "gets an id from a link" do
-    new_link = "http://gizmodo.com/how-police-body-cameras-were-designed-to-get-cops-off-t-1691693677/+maxread"
-    expect(kinja.get_post_id new_link).to eq "1691693677"
-
-    old_link = "http://lifehacker.com/238306/lifehacker-code-texter-windows"
-    expect(kinja.get_post_id old_link).to eq "238306"
-
-    old_link_nums = "http://lifehacker.com/238306/lifehacker-21-code-texter-windows"
-    expect(kinja.get_post_id old_link_nums).to eq "238306"
-
-    multi_nums = "http://theconcourse.deadspin.com/a-21st-century-rip-van-winkle-what-changed-in-my-decad-1691783386/+laceydonohue"
-    expect(kinja.get_post_id multi_nums).to eq "1691783386"
-  end
-
-  it "returns the id if it's passed an id instead of a link" do
-    expect(kinja.get_post_id "23432343").to eq "23432343"
-  end
 end
