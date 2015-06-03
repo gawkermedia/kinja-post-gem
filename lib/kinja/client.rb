@@ -22,7 +22,7 @@ module Kinja
     end
 
     def login
-      response = HTTParty.get "#{API_ROOT}#{LOGIN_PATH}?screenName=#{@username}&token=#{@pass}"
+      response = HTTParty.get "#{API_ROOT}#{LOGIN_PATH}?screenName=#{URI.encode @username}&token=#{URI.encode @pass}"
       @user = response["data"]
       response
     end

@@ -22,7 +22,7 @@ Or install it yourself as:
 
 ```ruby
 # Create an instance of the kinja client
-client = Kinja::Client.new(
+client = Kinja.new(
   user: "username",
   password: "password"
 )
