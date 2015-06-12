@@ -17,6 +17,9 @@ describe Kinja do
 
     multi_nums = "http://theconcourse.deadspin.com/a-21st-century-rip-van-winkle-what-changed-in-my-decad-1691783386/+laceydonohue"
     expect(kinja.get_post_id multi_nums).to eq "1691783386"
+
+    kotaku_bum = "http://kotaku.com/1710975351"
+    expect(kinja.get_post_id kotaku_bum).to eq "1710975351"
   end
 
   it "returns the id if it's passed an id instead of a link" do

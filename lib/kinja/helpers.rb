@@ -2,7 +2,7 @@ module Kinja
   module Helper
     def get_post_id(link)
       return link if link.match(/^\d+$/)
-      new_link_re = /-(\d{8,11})\/?/
+      new_link_re = /-?(\d{8,11})\/?/
       old_link_re = /\.com\/(\d+)\//
       return link.match(new_link_re)[1] if link.match(new_link_re)
       return link.match(old_link_re)[1] if link.match(old_link_re)
