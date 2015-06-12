@@ -3,8 +3,8 @@ require 'spec_helper'
 describe Kinja do
   let(:kinja) {
     Kinja.new(
-      user: ENV["USER"],
-      password: ENV["PASS"]
+      user: ENV["KINJA_USER"],
+      password: ENV["KINJA_PASS"]
   )
   }
 

@@ -3,8 +3,8 @@ require 'spec_helper'
 describe Kinja::Post do
   let(:kinja) {
     Kinja::Client.new(
-      user: ENV["USER"],
-      password: ENV["PASS"]
+      user: ENV["KINJA_USER"],
+      password: ENV["KINJA_PASS"]
   )
   }
 
@@ -40,8 +40,9 @@ describe Kinja::Post do
 
   it "updates posts" do
     VCR.use_cassette('update-post') do
-      link = "http://gemtest.kinja.com/gawker-1687581385"
+      link = "http://gemtest.kinja.com/gawker-1710983044"
       post = kinja.update_post(link, publishTimeMillis: DateTime.now.strftime('%Q').to_i)
+      expect(post["meta"]["error"]).to be nil
     end
   end
 

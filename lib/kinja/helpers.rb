@@ -28,7 +28,7 @@ module Kinja
     end
 
     def update_post_path(id)
-      "#{API_ROOT}#{POST_PATH}/#{id}/update?token=#{@api_token}"
+      "#{API_ROOT}/#{POST_PATH}/#{id}/update?token=#{@api_token}"
     end
 
 

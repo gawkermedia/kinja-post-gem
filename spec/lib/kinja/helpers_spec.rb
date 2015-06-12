@@ -22,4 +22,10 @@ describe Kinja do
   it "returns the id if it's passed an id instead of a link" do
     expect(kinja.get_post_id "23432343").to eq "23432343"
   end
+
+  it "has the right update path" do
+    # id = "1710957063"
+    # expect(Kinja::Helper.update_post_path(id)).to eq 'something'
+    # "api/core/post/$id<[0-9]+>/update"
+  end
 end
