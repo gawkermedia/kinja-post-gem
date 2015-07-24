@@ -1,12 +1,14 @@
 ---
 http_interactions:
 - request:
-    method: get
-    uri: http://kinja.com/api/profile/account/burner/login?screenName=gemtest&token=mzjjk%20judly%20bjysk%20ujnbv
+    method: post
+    uri: http://kinja.com/api/profile/session/burnerLogin
     body:
-      encoding: US-ASCII
-      string: ''
-    headers: {}
+      encoding: UTF-8
+      string: '{"screenName":"gemtest","token":"mzjjk judly bjysk ujnbv"}'
+    headers:
+      Content-Type:
+      - application/json
   response:
     status:
       code: 200
@@ -20,14 +22,14 @@ http_interactions:
       - CP="IDC DSP COR CURa ADMa OUR IND PHY ONL COM STA"
       Set-Cookie:
       - KinjaBurner="d41d8cd98f00b204e9800998ecf8427e|mzjjk judly bjysk ujnbv"; Expires=Mon,
-        09 Jun 2025 21:10:10 GMT; Path=/; HTTPOnly
-      - KinjaRememberMe=5876237249235511023|42634297-a187-4eda-b5e9-c2b985168c20;
-        Expires=Mon, 09 Jun 2025 21:10:10 GMT; Path=/; HTTPOnly
-      - KinjaSession=42634297-a187-4eda-b5e9-c2b985168c20; Expires=Fri, 19 Jun 2015
-        21:10:10 GMT; Path=/; HTTPOnly
+        21 Jul 2025 16:06:41 GMT; Path=/; HTTPOnly
+      - KinjaRememberMe=5876237249235511023|bb8479ff-1bab-418e-8352-7f2a211eebde;
+        Expires=Mon, 21 Jul 2025 16:06:41 GMT; Path=/; HTTPOnly
+      - KinjaSession=bb8479ff-1bab-418e-8352-7f2a211eebde; Expires=Fri, 31 Jul 2015
+        16:06:41 GMT; Path=/; HTTPOnly
       - geocc=US;path=/;
       X-Kinja:
-      - 'app02.xyz.kinja-ops.com #1322'
+      - 'app19.bfc.kinja-ops.com #1445'
       X-Kinja-Version:
       - '20141118'
       X-Robots-Tag:
@@ -39,37 +41,35 @@ http_interactions:
       Accept-Ranges:
       - bytes
       Date:
-      - Fri, 12 Jun 2015 21:10:10 GMT
+      - Fri, 24 Jul 2015 16:06:41 GMT
       Via:
       - 1.1 varnish
-      Age:
-      - '0'
       Connection:
       - keep-alive
       X-Served-By:
-      - cache-jfk1035-JFK
+      - cache-jfk1030-JFK
       X-Cache:
       - MISS
       X-Cache-Hits:
       - '0'
       X-Timer:
-      - S1434143410.639334,VS0,VE46
+      - S1437754001.636579,VS0,VE44
       Vary:
       - X-Feature-Hash
     body:
       encoding: UTF-8
-      string: '{"meta":{"error":null,"warnings":[]},"data":{"id":"5876237249235511023","screenName":"gemtest","displayName":"gemtest","authType":4,"authName":"burner","createdMillis":1424733492000,"updatedMillis":1434143410675,"lastLoginMillis":1434143410675,"status":"enabled","avatar":{"id":"17jcxk0ml1k8qpng","format":"png"},"superUser":false}}'
+      string: '{"meta":{"error":null,"warnings":[]},"data":{"id":"5876237249235511023","screenName":"gemtest","displayName":"gemtest","authType":4,"authName":"burner","createdMillis":1424733492000,"updatedMillis":1437754001674,"lastLoginMillis":1437754001674,"status":"enabled","avatar":{"id":"17jcxk0ml1k8qpng","format":"png"},"superUser":false}}'
     http_version: 
-  recorded_at: Fri, 12 Jun 2015 21:10:10 GMT
+  recorded_at: Fri, 24 Jul 2015 16:06:41 GMT
 - request:
-    method: get
-    uri: http://kinja.com/api/profile/token
+    method: post
+    uri: http://kinja.com/api/profile/token/create
     body:
-      encoding: US-ASCII
+      encoding: UTF-8
       string: ''
     headers:
       Cookie:
-      - KinjaSession=42634297-a187-4eda-b5e9-c2b985168c20
+      - KinjaSession=bb8479ff-1bab-418e-8352-7f2a211eebde
   response:
     status:
       code: 200
@@ -82,11 +82,11 @@ http_interactions:
       P3p:
       - CP="IDC DSP COR CURa ADMa OUR IND PHY ONL COM STA"
       Set-Cookie:
-      - KinjaSession=42634297-a187-4eda-b5e9-c2b985168c20; Expires=Fri, 19 Jun 2015
-        21:10:10 GMT; Path=/; HTTPOnly
+      - KinjaSession=bb8479ff-1bab-418e-8352-7f2a211eebde; Expires=Fri, 31 Jul 2015
+        16:06:41 GMT; Path=/; HTTPOnly
       - geocc=US;path=/;
       X-Kinja:
-      - 'app11.xyz.kinja-ops.com #1322'
+      - 'app11.bfc.kinja-ops.com #1445'
       X-Kinja-Version:
       - '20141118'
       X-Robots-Tag:
@@ -94,32 +94,30 @@ http_interactions:
       X-Cdn-Fetch:
       - mantle-setcookie
       Content-Length:
-      - '230'
+      - '181'
       Accept-Ranges:
       - bytes
       Date:
-      - Fri, 12 Jun 2015 21:10:10 GMT
+      - Fri, 24 Jul 2015 16:06:41 GMT
       Via:
       - 1.1 varnish
-      Age:
-      - '0'
       Connection:
       - keep-alive
       X-Served-By:
-      - cache-jfk1035-JFK
+      - cache-jfk1023-JFK
       X-Cache:
       - MISS
       X-Cache-Hits:
       - '0'
       X-Timer:
-      - S1434143410.725645,VS0,VE10
+      - S1437754001.723059,VS0,VE51
       Vary:
       - X-Feature-Hash
     body:
       encoding: UTF-8
-      string: '{"meta":{"error":null,"warnings":[]},"data":{"token":"e8a820e0-4b39-4810-be0a-281d7989ee67-0-e19dec0921e7ae19c7c4c94f72753666b79cc4a7","session":"42634297-a187-4eda-b5e9-c2b985168c20","secure":false,"createdMillis":1434143410732}}'
+      string: '{"meta":{"error":null,"warnings":[]},"data":{"token":"ffc16536-2966-4af9-a21a-09370ed3a67b-0-f4fc81de731d2f2098ca87a11d91d788ecd996d6","secure":false,"createdMillis":1437754001763}}'
     http_version: 
-  recorded_at: Fri, 12 Jun 2015 21:10:10 GMT
+  recorded_at: Fri, 24 Jul 2015 16:06:41 GMT
 - request:
     method: get
     uri: http://kinja.com/api/profile/user/views/asAuthor?ids=5876237249235511023
@@ -135,7 +133,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       X-Kinja:
-      - 'app17.xyz.kinja-ops.com #1322'
+      - 'app06.bfc.kinja-ops.com #1445'
       X-Kinja-Version:
       - '20141118'
       X-Robots-Tag:
@@ -147,7 +145,7 @@ http_interactions:
       Accept-Ranges:
       - bytes
       Date:
-      - Fri, 12 Jun 2015 21:10:10 GMT
+      - Fri, 24 Jul 2015 16:06:41 GMT
       Via:
       - 1.1 varnish
       Age:
@@ -155,13 +153,13 @@ http_interactions:
       Connection:
       - keep-alive
       X-Served-By:
-      - cache-jfk1026-JFK
+      - cache-jfk1022-JFK
       X-Cache:
-      - MISS
+      - HIT
       X-Cache-Hits:
-      - '0'
+      - '1'
       X-Timer:
-      - S1434143410.772107,VS0,VE4
+      - S1437754001.806497,VS0,VE0
       Vary:
       - X-Feature-Hash
       Set-Cookie:
@@ -170,13 +168,13 @@ http_interactions:
       encoding: UTF-8
       string: '{"meta":{"error":null,"warnings":[]},"data":[{"id":"5876237249235511023","screenName":"gemtest","displayName":"gemtest","superUser":false,"defaultBlogId":1634457255,"avatar":{"id":"17jcxk0ml1k8qpng","format":"png"}}]}'
     http_version: 
-  recorded_at: Fri, 12 Jun 2015 21:10:10 GMT
+  recorded_at: Fri, 24 Jul 2015 16:06:41 GMT
 - request:
     method: post
-    uri: http://kinja.com/api/core/post/1710983044/update?token=e8a820e0-4b39-4810-be0a-281d7989ee67-0-e19dec0921e7ae19c7c4c94f72753666b79cc4a7
+    uri: http://kinja.com/api/core/post/1710983044/update?token=ffc16536-2966-4af9-a21a-09370ed3a67b-0-f4fc81de731d2f2098ca87a11d91d788ecd996d6
     body:
       encoding: UTF-8
-      string: '{"publishTimeMillis":1434143410627,"defaultBlogId":1634457255}'
+      string: '{"publishTimeMillis":1437754001616,"defaultBlogId":1634457255}'
     headers:
       Content-Type:
       - application/json
@@ -185,44 +183,44 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Access-Control-Allow-Origin:
-      - "*"
       Access-Control-Allow-Headers:
       - Content-Type
       Access-Control-Allow-Methods:
       - POST, GET, OPTIONS, PUT, DELETE
+      Access-Control-Allow-Origin:
+      - "*"
       Cache-Control:
       - stale-if-error=86400
       Content-Type:
       - application/json; charset=utf-8
       X-Kinja:
-      - 'app01.xyz.kinja-ops.com #6505'
+      - 'app16.bfc.kinja-ops.com #6703'
       X-Cdn-Fetch:
       - mantle-default
       Content-Length:
-      - '2836'
+      - '2832'
       Accept-Ranges:
       - bytes
       Date:
-      - Fri, 12 Jun 2015 21:10:10 GMT
+      - Fri, 24 Jul 2015 16:06:41 GMT
       Via:
       - 1.1 varnish
       Connection:
       - keep-alive
       X-Served-By:
-      - cache-jfk1033-JFK
+      - cache-jfk1035-JFK
       X-Cache:
       - MISS
       X-Cache-Hits:
       - '0'
       X-Timer:
-      - S1434143410.822742,VS0,VE75
+      - S1437754001.847161,VS0,VE67
       Set-Cookie:
       - geocc=US;path=/;
     body:
       encoding: UTF-8
-      string: '{"meta":{"error":null,"warnings":[]},"data":{"id":1710983044,"parentId":null,"parentAuthorId":null,"starterId":1710983044,"publishTimeMillis":1434143410627,"lastUpdateTimeMillis":1434143410875,"timezone":"America/New_York","shareBlogId":null,"sharedPostId":null,"sharedUrl":null,"salesAvatar":null,"sponsored":false,"status":"PUBLISHED","authorId":"5876237249235511023","allowReplies":true,"byline":"","showByline":true,"properties":"","xmliId":null,"blogId":[1634457255],"defaultBlogId":1634457255,"authorBlogId":1634457255,"liveBlog":false,"approved":true,"headline":"","original":"<p>[<a
-        data-attr=\"http://gawker.com/no-playlist-1685415865\" href=\"http://gawker.com/no-playlist-1685415865\">Gawker</a>]</p>","source":"wysiwyg","images":[],"videos":[],"videoThumbs":[],"author":{"id":"5876237249235511023","screenName":"gemtest","displayName":"gemtest","defaultBlogId":1634457255,"defaultBlog":null,"avatar":{"id":"17jcxk0ml1k8qpng","format":"png"}},"tags":[],"blogs":[{"id":1634457255,"name":"gemtest","displayName":"gemtest","canonicalHost":"gemtest.kinja.com","hosts":[],"status":"ENABLED","timezone":"America/New_York","timezoneOffset":-14400000,"timezoneShortname":"EDT","mergedProperties":null,"avatar":null}],"annotation":null,"viewstats":null,"promotions":[],"replyMeta":null,"replyCount":null,"parent":null,"starter":null,"blogPostAction":null,"score":null,"insets":[],"referencedBy":[],"likes":null,"sharedPost":null,"reframes":[],"noindex":null,"isRecommended":null,"permalink":"http://gemtest.kinja.com/gawker-1710983044","permalinkHost":"http://gemtest.kinja.com","permalinkPath":"/gawker-1710983044","display":"<p
+      string: '{"meta":{"error":null,"warnings":[]},"data":{"id":1710983044,"parentId":null,"parentAuthorId":null,"starterId":1710983044,"publishTimeMillis":1437754001616,"lastUpdateTimeMillis":1437754001892,"timezone":"America/New_York","shareBlogId":null,"sharedPostId":null,"sharedUrl":null,"salesAvatar":null,"sponsored":false,"status":"PUBLISHED","authorId":"5876237249235511023","allowReplies":true,"byline":"","showByline":true,"properties":"","xmliId":null,"blogId":[1634457255],"defaultBlogId":1634457255,"authorBlogId":1634457255,"liveBlog":false,"approved":true,"headline":"","original":"<p>[<a
+        data-attr=\"http://gawker.com/no-playlist-1685415865\" href=\"http://gawker.com/no-playlist-1685415865\">Gawker</a>]</p>","source":"wysiwyg","images":[],"videos":[],"videoThumbs":[],"author":{"id":"5876237249235511023","screenName":"gemtest","displayName":"gemtest","defaultBlogId":1634457255,"defaultBlog":null,"avatar":{"id":"17jcxk0ml1k8qpng","format":"png"}},"tags":[],"blogs":[{"id":1634457255,"name":"gemtest","displayName":"gemtest","canonicalHost":"gemtest.kinja.com","hosts":[],"status":"ENABLED","timezone":"America/New_York","timezoneOffset":-14400000,"timezoneShortname":"EDT","properties":null,"avatar":null}],"annotation":null,"viewstats":null,"promotions":[],"replyMeta":null,"replyCount":null,"parent":null,"starter":null,"blogPostAction":null,"score":null,"insets":[],"referencedBy":[],"likes":null,"sharedPost":null,"reframes":[],"noindex":null,"isRecommended":null,"permalink":"http://gemtest.kinja.com/gawker-1710983044","permalinkHost":"http://gemtest.kinja.com","permalinkPath":"/gawker-1710983044","display":"<p
         class=\"first-text\">[<a href=\"http://gawker.com/no-playlist-1685415865\"
         target=\"_blank\">Gawker</a><inset id=\"1685415865\" />]</p><!-- core-decorated
         -->","excerpt":"<p class=\"first-text\">[<a href=\"http://gawker.com/no-playlist-1685415865\"
@@ -230,10 +228,10 @@ http_interactions:
         class=\"first-text\">[<a href=\"http://gawker.com/no-playlist-1685415865\"
         target=\"_blank\">Gawker</a>]</p>","excerptWithAssets":"<p class=\"first-text\">[<a
         href=\"http://gawker.com/no-playlist-1685415865\" target=\"_blank\">Gawker</a>\n
-        <inset id=\"1685415865\" />]</p>","aboveHeadline":null,"leftOfHeadline":null,"firstAsset":"","length":8,"postId":1710983044,"isBlip":true,"sharingMainImage":null,"facebookImage":null,"firstSentence":"[Gawker]","hasReadMore":false,"publishTime":{"timestamp":1434143410627,"timezone":"America/New_York","MdyHm":"06/12/2015
-        17:10","MdyatHm":"06/12/2015 at 17:10","rfc822":"Fri, 12 Jun 2015 21:10:10
-        GMT","yMdHmsZ":"2015-06-12T17:10:10-04:00","hmma":"5:10pm","day":"Friday","Mddyyhmma":"6/12/15
-        5:10pm","fullDate":"June 12, 2015","relative":{"amount":null,"type":"now"}},"authorBlogName":"gemtest"}}'
+        <inset id=\"1685415865\" />]</p>","aboveHeadline":null,"leftOfHeadline":null,"firstAsset":"","length":8,"postId":1710983044,"isBlip":true,"sharingMainImage":null,"facebookImage":null,"firstSentence":"[Gawker]","hasReadMore":false,"publishTime":{"timestamp":1437754001616,"timezone":"America/New_York","MdyHm":"07/24/2015
+        12:06","MdyatHm":"07/24/2015 at 12:06","rfc822":"Fri, 24 Jul 2015 16:06:41
+        GMT","yMdHmsZ":"2015-07-24T12:06:41-04:00","hmma":"12:06pm","day":"Friday","Mddyyhmma":"7/24/15
+        12:06pm","fullDate":"July 24, 2015","relative":{"amount":null,"type":"now"}},"authorBlogName":"gemtest"}}'
     http_version: 
-  recorded_at: Fri, 12 Jun 2015 21:10:10 GMT
+  recorded_at: Fri, 24 Jul 2015 16:06:41 GMT
 recorded_with: VCR 2.9.3

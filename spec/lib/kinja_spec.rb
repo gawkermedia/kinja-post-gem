@@ -19,12 +19,12 @@ describe Kinja do
   end
 
   it "gets session token from login data" do
-    expect(kinja.session_token response).to eq 'a72c7535-20c9-447d-b22c-a502af7be233'
+    expect(kinja.session_token response).to eq 'cdcca983-a1a7-4765-8e37-6624198b1699'
   end
 
   it "gets an API token" do
     VCR.use_cassette('api-token-test') do
-      expect(kinja.get_api_token response).to eq '78c7e184-d9da-4555-b8c3-f488e6a7a343'
+      expect(kinja.get_api_token response).to eq 'd4e084be-77ed-4bc6-ab0d-248a5f047df8-0-d367eb4abb79931841acb749fe64012f9a4f0d1d'
     end
   end
 

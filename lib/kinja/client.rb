@@ -22,13 +22,19 @@ module Kinja
     end
 
     def login
-      response = HTTParty.get "#{API_ROOT}#{LOGIN_PATH}?screenName=#{URI.encode @username}&token=#{URI.encode @pass}"
+      response = HTTParty.post("#{API_ROOT}#{LOGIN_PATH}",
+        body: {
+          screenName: URI.encode(@username),
+          token: @pass
+        }.to_json,
+        headers: { 'Content-Type' => 'application/json' }
+      )
       @user = response["data"]
       response
     end
 
     def get_api_token(response)
-      @api_token = HTTParty.get("#{API_ROOT}#{TOKEN_PATH}",
+      @api_token = HTTParty.post("#{API_ROOT}#{TOKEN_PATH}",
         cookies: {KinjaSession: session_token(response)}
                   )['data']['token']
     end
