@@ -15,9 +15,12 @@ module Kinja
     CREATE_POST_PATH   = "/core/post/add"
     POST_PATH   = "core/post"
     BLOG_PATH   = "core/blog"
+    BLOG_MEMBERS_PATH   = "profile/blogmembership/views/manageBlogMembers?blogId="
     TAG_PATH    = "core/tag"
     BLOG_PROFILE_PATH   = "profile/blog/byhost"
     AUTHOR_PATH = "profile/user/views/asAuthor"
+    AUTHOR_NAME_PATH = "profile/user/views/byName?name="
+    AUTHOR_POSTS_PATH = "core/author"
 
     def post_path(id)
       "#{API_ROOT}/#{POST_PATH}/#{id}"
@@ -39,6 +42,10 @@ module Kinja
       "#{API_ROOT}/#{BLOG_PROFILE_PATH}/#{name}"
     end
 
+    def blog_members_path(id)
+      "#{API_ROOT}/#{BLOG_MEMBERS_PATH}#{id}"
+    end
+
     def tag_path(name)
       "#{API_ROOT}/#{TAG_PATH}/#{URI.encode name}"
     end
@@ -49,6 +56,15 @@ module Kinja
 
     def author_path(id)
       "#{API_ROOT}/#{AUTHOR_PATH}?ids=#{id}"
+    end
+
+    def author_name_path(name)
+      "#{API_ROOT}/#{AUTHOR_NAME_PATH}#{name}"
+    end
+
+    def author_posts_path(id, start=nil, max=20)
+      start = DateTime.now.strftime('%Q') if start.nil?
+      "#{API_ROOT}/#{AUTHOR_POSTS_PATH}/#{id}/profileposts?startTime=#{start}&maxReturned=#{max}"
     end
 
   end

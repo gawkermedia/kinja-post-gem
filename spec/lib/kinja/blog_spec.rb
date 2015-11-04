@@ -26,4 +26,12 @@ describe Kinja::Blog do
     end
   end
 
+  it "retrieves a blog's members by blog name" do
+    VCR.use_cassette('get_members_by_id') do
+      blog_id = 7 # gawker
+      members = kinja.get_members(blog_id)
+      expect(members.length).to eq 86
+    end
+  end
+
 end

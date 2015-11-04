@@ -19,4 +19,22 @@ describe Kinja::Author do
     end
   end
 
+  it "retrieves an author's author id" do
+    VCR.use_cassette('get_author_id') do
+      author_id = kinja.get_author_id('adampash')
+      expect(author_id).to eq "5716491910670767033"
+    end
+  end
+
+  it "retrieves an author's posts" do
+    VCR.use_cassette(
+      'get_author_posts',
+      :match_requests_on => [:host, :path]
+    ) do
+      author_id = "5716491910670767033"
+      posts = kinja.get_author_posts(author_id)
+      expect(posts["items"].length).to eq 20
+    end
+  end
+
 end

@@ -27,6 +27,11 @@ module Kinja
       profile["data"]["id"]
     end
 
+    def get_members(id)
+      members = HTTParty.get(blog_members_path(id))
+      members["data"]
+    end
+
   end
 end
 
