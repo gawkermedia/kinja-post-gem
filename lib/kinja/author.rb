@@ -23,7 +23,6 @@ module Kinja
         posts = posts.flatten
 
         break if feed["pagination"]["next"].nil?
-        break if posts.length > 100
         next_one = feed["pagination"]["next"]["startTime"]
         puts posts.length
         puts "Getting next one #{next_one}"
@@ -36,32 +35,3 @@ module Kinja
     end
   end
 end
-
-    #
-    #
-    # def all_in_tag(name, blog=nil)
-    #   posts = []
-    #   feed = get_posts_in_tag(name)
-    #   posts.push feed["data"]["items"]
-    #   next_one = feed["data"]["pagination"]["next"]["startTime"]
-    #   loop do
-    #     if blog.nil?
-    #       feed = get_posts_in_tag(
-    #         name,
-    #         "?startTime=#{next_one}"
-    #       )
-    #       puts next_one
-    #     else
-    #       feed = get_posts_in_tag_for_site(name, blog)
-    #     end
-    #     if feed["meta"]["success"]
-    #       posts.push feed["data"]["items"]
-    #     else
-    #       feed
-    #     end
-    #     # require 'pry'; binding.pry
-    #     break if feed["data"]["pagination"]["next"].nil?
-    #     next_one = feed["data"]["pagination"]["next"]["startTime"]
-    #   end
-    #   posts.flatten
-    # end
