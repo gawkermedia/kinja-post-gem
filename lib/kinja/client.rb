@@ -1,6 +1,7 @@
 require "kinja/post"
 require "kinja/blog"
 require "kinja/author"
+require "kinja/analytics"
 require "kinja/tag"
 require "kinja/helpers"
 require 'httparty'
@@ -11,6 +12,7 @@ module Kinja
     include Kinja::Post
     include Kinja::Blog
     include Kinja::Author
+    include Kinja::Analytics
     include Kinja::Tag
     include Kinja::Helper
 

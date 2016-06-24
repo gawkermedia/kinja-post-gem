@@ -33,8 +33,19 @@ describe Kinja::Author do
     ) do
       author_id = "5716491910670767033"
       posts = kinja.get_author_posts(author_id)
+
       expect(posts["items"].length).to eq 20
     end
+  end
+
+  it "gets all posts and calculates page views" do
+    id = kinja.get_author_id("sambiddle")
+    posts = kinja.get_all_author_posts(id)
+    post_ids = posts.map do |post|
+      puts post["post"]["id"]
+      post["post"]["id"]
+    end
+    require 'pry'; binding.pry
   end
 
 end

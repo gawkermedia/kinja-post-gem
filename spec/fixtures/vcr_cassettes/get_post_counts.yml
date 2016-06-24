@@ -1,0 +1,78 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://kinja.com/api/analytics/kala/viewsForPost?id=1775111772
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - stale-if-error=86400
+      Content-Security-Policy:
+      - default-src 'self'
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - DENY
+      X-Kinja:
+      - 'app03.bfc.kinja-ops.com #67'
+      X-Kinja-Build:
+      - '67'
+      X-Kinja-Revision:
+      - a4fdf7b6e3fb653a1bee22124aec3fc1a7845f61
+      X-Kinja-Server:
+      - app03.bfc.kinja-ops.com
+      X-Permitted-Cross-Domain-Policies:
+      - master-only
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Cdn-Fetch:
+      - mantle-origin-cache
+      Content-Length:
+      - '99'
+      Accept-Ranges:
+      - bytes
+      Date:
+      - Fri, 24 Jun 2016 18:45:19 GMT
+      Via:
+      - 1.1 varnish
+      Age:
+      - '0'
+      Connection:
+      - keep-alive
+      X-Served-By:
+      - cache-jfk1047-JFK
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+      X-Timer:
+      - S1466793919.618431,VS0,VE35
+      Vary:
+      - Accept-Encoding
+      X-Geo-Segment:
+      - C
+      Set-Cookie:
+      - geocc=US;path=/;
+    body:
+      encoding: ASCII-8BIT
+      string: '{"meta":{"warnings":[]},"data":[{"id":"1775111772","views":351707,"uniqueViews":91159}]}'
+    http_version: 
+  recorded_at: Fri, 24 Jun 2016 18:45:19 GMT
+recorded_with: VCR 2.9.3

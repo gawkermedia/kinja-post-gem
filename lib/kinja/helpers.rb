@@ -21,6 +21,11 @@ module Kinja
     AUTHOR_PATH = "profile/user/views/asAuthor"
     AUTHOR_NAME_PATH = "profile/user/views/byName?name="
     AUTHOR_POSTS_PATH = "core/author"
+    ANALYTICS_PATH = "analytics/kala/viewsForPost?id="
+
+    def analytics_path(id)
+      "#{API_ROOT}/#{ANALYTICS_PATH}#{id}"
+    end
 
     def post_path(id)
       "#{API_ROOT}/#{POST_PATH}/#{id}"
