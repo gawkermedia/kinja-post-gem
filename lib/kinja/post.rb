@@ -14,7 +14,7 @@ module Kinja
       HTTParty.post create_post_path,
         body: {
           headline: opts[:headline],
-          original: opts[:body],
+          body: opts[:body],
           defaultBlogId: opts[:defaultBlogId],
           status: opts[:status],
           allowReplies: opts[:replies]
