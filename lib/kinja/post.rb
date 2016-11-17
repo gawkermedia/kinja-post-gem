@@ -17,7 +17,8 @@ module Kinja
           body: opts[:body],
           defaultBlogId: opts[:defaultBlogId],
           status: opts[:status],
-          allowReplies: opts[:replies]
+          allowReplies: opts[:replies],
+          tags: []
         }.to_json,
         headers: { 'Content-Type' => 'application/json' }
     end
