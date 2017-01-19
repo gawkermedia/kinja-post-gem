@@ -32,11 +32,11 @@ module Kinja
     end
 
     def create_post_path
-      "#{API_ROOT}#{CREATE_POST_PATH}?token=#{@api_token}"
+      "#{API_ROOT}#{CREATE_POST_PATH}"
     end
 
     def update_post_path(id)
-      "#{API_ROOT}/#{POST_PATH}/#{id}/update?token=#{@api_token}"
+      "#{API_ROOT}/#{POST_PATH}/#{id}/update"
     end
 
 
