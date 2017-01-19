@@ -6,7 +6,10 @@ module Kinja
     end
 
     def create_post(opts={})
-      get_api_token(login)
+      token = get_api_token(login)
+
+      puts "Trying to create post with token: #{token}"
+
       opts[:status] = opts[:status] || "DRAFT"
       opts[:replies] = opts[:replies] || false
       opts[:defaultBlogId] = opts[:defaultBlogId] || get_default_blog_id(@user)
@@ -23,12 +26,12 @@ module Kinja
         }.to_json,
         headers: {
           'content-type' => 'application/json',
-          'token' => @api_token
+          'token' => token
         }
     end
 
     def update_post(link_or_id, opts)
-      get_api_token(login)
+      token = get_api_token(login)
 
       id = get_post_id link_or_id
       opts[:defaultBlogId] = opts[:defaultBlogId] || get_default_blog_id(@user)
@@ -36,7 +39,7 @@ module Kinja
         body: opts.to_json,
         headers: {
           'Content-Type' => 'application/json',
-          'token' => @api_token
+          'token' => token
         }
     end
 
