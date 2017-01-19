@@ -34,7 +34,10 @@ module Kinja
       opts[:defaultBlogId] = opts[:defaultBlogId] || get_default_blog_id(@user)
       HTTParty.post update_post_path(id),
         body: opts.to_json,
-        headers: { 'Content-Type' => 'application/json' }
+        headers: {
+          'Content-Type' => 'application/json',
+          'token' => @api_token
+        }
     end
 
   end
