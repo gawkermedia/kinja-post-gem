@@ -38,13 +38,13 @@ describe Kinja::Author do
     end
   end
 
-  it "gets all posts and calculates page views" do
-    id = kinja.get_author_id("sambiddle")
-    posts = kinja.get_all_author_posts(id)
-    posts.map do |post|
-      puts post["post"]["id"]
-      post["post"]["id"]
-    end
-  end
+  # it "gets all posts and calculates page views" do
+  #   id = kinja.get_author_id("sambiddle")
+  #   posts = kinja.get_all_author_posts(id)
+  #   posts.map do |post|
+  #     puts post["post"]["id"]
+  #     post["post"]["id"]
+  #   end
+  # end
 
 end

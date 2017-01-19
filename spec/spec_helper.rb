@@ -4,7 +4,7 @@ RSpec.configure do |c|
 end
 
 require 'dotenv'
-ENV = Dotenv.load unless ENV
+ENV = Dotenv.load
 
 require 'vcr'
 VCR.configure do |config|

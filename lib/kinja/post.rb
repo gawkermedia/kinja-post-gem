@@ -8,9 +8,10 @@ module Kinja
     def create_post(opts={})
       get_api_token(login)
       opts[:status] = opts[:status] || "DRAFT"
-      opts[:replies] = opts[:replies] || true
+      opts[:replies] = opts[:replies] || false
       opts[:defaultBlogId] = opts[:defaultBlogId] || get_default_blog_id(@user)
 
+      puts opts
       HTTParty.post create_post_path,
         body: {
           headline: opts[:headline],
@@ -20,7 +21,10 @@ module Kinja
           allowReplies: opts[:replies],
           tags: []
         }.to_json,
-        headers: { 'Content-Type' => 'application/json' }
+        headers: {
+          'content-type' => 'application/json',
+          'token' => @api_token
+        }
     end
 
     def update_post(link_or_id, opts)

@@ -43,8 +43,11 @@ post = client.get_post("http://gawker.com/lapd-claims-the-jinx-had-nothing-to-do
 post = client.get_post("1691730232")
 ```
 
-## Todo
-* Build out other common REST endpoints
+## Publishing update
+
+1. Bump version in version.rb
+1. `rake build`
+1. `rake release`
 
 ## Contributing
 
