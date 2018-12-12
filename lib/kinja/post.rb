@@ -33,6 +33,8 @@ module Kinja
     def update_post(link_or_id, opts)
       token = get_api_token(login)
 
+      puts "Trying to create post with token: #{token}"
+
       id = get_post_id link_or_id
       opts[:defaultBlogId] = opts[:defaultBlogId] || get_default_blog_id(@user)
       opts[:token] = token
