@@ -9,7 +9,7 @@ module Kinja
     end
 
     private
-    API_ROOT    = "http://kinja.com/api"
+    API_ROOT    = "https://kinja.com/api"
     LOGIN_PATH  = "/profile/session/burnerLogin"
     TOKEN_PATH  = "/profile/token/create"
     CREATE_POST_PATH   = "/core/post/add"
