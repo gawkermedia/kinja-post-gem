@@ -24,7 +24,6 @@ module Kinja
     end
 
     def login
-      puts "Login Called"
       response = HTTParty.post("#{API_ROOT}#{LOGIN_PATH}",
         body: {
           screenName: URI.encode(@username),
@@ -32,7 +31,6 @@ module Kinja
         }.to_json,
         headers: { 'Content-Type' => 'application/json' }
       )
-      puts response
       @user = response["data"]
       response
     end
