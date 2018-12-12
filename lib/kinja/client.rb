@@ -32,7 +32,6 @@ module Kinja
         }.to_json,
         headers: { 'Content-Type' => 'application/json' }
       )
-      puts "Login Response below"
       puts response
       @user = response["data"]
       response
