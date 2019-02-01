@@ -13,6 +13,7 @@ module Kinja
       opts[:status] = opts[:status] || "DRAFT"
       opts[:replies] = opts[:replies] || false
       opts[:defaultBlogId] = opts[:defaultBlogId] || get_default_blog_id(@user)
+      opts[:userAgent] = opts[:userAgent] || 'kinja-post-gem'
 
       puts opts
       HTTParty.post create_post_path,
@@ -22,11 +23,12 @@ module Kinja
           defaultBlogId: opts[:defaultBlogId],
           status: opts[:status],
           allowReplies: opts[:replies],
-          tags: [],
-          token: token
+          tags: []
         }.to_json,
         headers: {
-          'content-type' => 'application/json'
+          'Content-Type' => 'application/json',
+          'Authorization' => 'Bearer ' + token,
+          'User-Agent' => opts[:userAgent]
         }
     end
 
@@ -35,11 +37,13 @@ module Kinja
 
       id = get_post_id link_or_id
       opts[:defaultBlogId] = opts[:defaultBlogId] || get_default_blog_id(@user)
-      opts[:token] = token
+      opts[:userAgent] = opts[:userAgent] || 'kinja-post-gem'
       HTTParty.post update_post_path(id),
         body: opts.to_json,
         headers: {
-          'Content-Type' => 'application/json'
+          'Content-Type' => 'application/json',
+          'Authorization' => 'Bearer ' + token,
+          'User-Agent' => opts[:userAgent]
         }
     end
 
